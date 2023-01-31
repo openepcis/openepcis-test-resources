@@ -1,0 +1,38 @@
+<epcis:EPCISDocument xmlns:epcis="urn:epcglobal:epcis:xsd:2" schemaVersion="2.0" creationDate="2019-10-07T15:00:00.000+01:00"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xmlns:gs1="https://gs1.org/voc/"
+                     xmlns:cbv="https://ref.gs1.org/cbv/"
+                     xmlns:cbvmda="urn:epcglobal:cbv:mda"
+                     xmlns:example="https://ns.example.com/epcis"
+                     xmlns:example1="https://ns.example1.com/epcis"
+                     xmlns:example2="https://ns.example2.com/epcis"
+                     xmlns:example3="https://ns.example3.com/epcis"
+                     xmlns:example4="https://ns.example4.com/epcis">
+    <EPCISBody>
+        <EventList>
+            <TransactionEvent>
+                <eventTime>2020-07-03T00:05:00-06:00</eventTime>
+                <eventTimeZoneOffset>-06:00</eventTimeZoneOffset>
+                <bizTransactionList>
+                    <bizTransaction type="urn:epcglobal:cbv:btt:po">urn:epcglobal:cbv:bt:4012345123456:RE100099</bizTransaction>
+                </bizTransactionList>
+                <epcList>
+                    <epc>urn:epc:id:sgtin:0614141.107340.1</epc>
+                    <epc>urn:epc:id:sgtin:0614141.107340.2</epc>
+                </epcList>
+                <action>ADD</action>
+                <bizStep>urn:epcglobal:cbv:bizstep:inspecting</bizStep>
+                <disposition>urn:epcglobal:cbv:disp:needs_replacement</disposition>
+                <readPoint>
+                    <id>urn:epc:id:sgln:4012345.00000.5</id>
+                </readPoint>
+                <sensorElementList>
+                    <sensorElement>
+                        <sensorReport type="gs1:EffectiveDoseRate" value="0.005" uom="P71"/>
+                    </sensorElement>
+                </sensorElementList>
+            </TransactionEvent>
+
+        </EventList>
+    </EPCISBody>
+</epcis:EPCISDocument>

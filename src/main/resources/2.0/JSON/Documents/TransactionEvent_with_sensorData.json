@@ -1,0 +1,129 @@
+{
+  "@context": [
+    "https://gs1.github.io/EPCIS/epcis-context.jsonld",
+    {
+      "example": "http://ns.example.com/epcis/"
+    }
+  ],
+  "type": "EPCISDocument",
+  "creationDate": "2020-07-03T00:05:00-06:00",
+  "schemaVersion": "2.0",
+  "epcisBody": {
+    "eventList": [
+      {
+        "eventID": "ni:///sha-256;8702ac80df8ac48d19cc0c8d19399249fc7037f8b752acb97baf7148960d2a17?ver=CBV2.0",
+        "type": "TransactionEvent",
+        "eventTime": "2020-07-03T00:05:00-06:00",
+        "eventTimeZoneOffset": "-06:00",
+        "epcList": [
+          "urn:epc:id:sgtin:0614141.107340.1",
+          "urn:epc:id:sgtin:0614141.107340.2"
+        ],
+        "action": "ADD",
+        "bizStep": "inspecting",
+        "disposition": "needs_replacement",
+        "readPoint": {
+          "id": "urn:epc:id:sgln:4012345.00000.5"
+        },
+        "bizTransactionList": [
+          {
+            "type": "po",
+            "bizTransaction": "urn:epcglobal:cbv:bt:4012345123456:RE100099"
+          }
+        ],
+        "sensorElementList": [
+          {
+            "sensorMetadata": {
+              "time": "2019-04-02T14:05:00.000+01:00",
+              "deviceID": "urn:epc:id:giai:4000001.111",
+              "deviceMetadata": "https://id.gs1.org/8004/4000001111",
+              "rawData": "https://example.org/8004/401234599999"
+            },
+            "sensorReport": [
+              {
+                "type": "Temperature",
+                "value": 26.0,
+                "uom": "CEL"
+              },
+              {
+                "type": "AbsoluteHumidity",
+                "value": 12.1,
+                "uom": "A93"
+              },
+              {
+                "type": "Speed",
+                "value": 160.0,
+                "uom": "KMH"
+              },
+              {
+                "type": "Illuminance",
+                "value": 800.0,
+                "uom": "LUX"
+              }
+            ]
+          },
+          {
+            "sensorMetadata": {
+              "time": "2019-04-02T14:35:00.000+01:00",
+              "deviceID": "urn:epc:id:giai:4000001.111",
+              "deviceMetadata": "https://id.gs1.org/8004/4000001111",
+              "rawData": "https://example.org/8004/401234599999"
+            },
+            "sensorReport": [
+              {
+                "type": "Temperature",
+                "value": 26.1,
+                "uom": "CEL"
+              },
+              {
+                "type": "AbsoluteHumidity",
+                "value": 12.2,
+                "uom": "A93"
+              },
+              {
+                "type": "Speed",
+                "value": 161.0,
+                "uom": "KMH"
+              },
+              {
+                "type": "Illuminance",
+                "value": 801.0,
+                "uom": "LUX"
+              }
+            ]
+          },
+          {
+            "sensorMetadata": {
+              "time": "2019-04-02T14:55:00.000+01:00",
+              "deviceID": "urn:epc:id:giai:4000001.111",
+              "deviceMetadata": "https://id.gs1.org/8004/4000001111",
+              "rawData": "https://example.org/8004/401234599999"
+            },
+            "sensorReport": [
+              {
+                "type": "Temperature",
+                "value": 26.2,
+                "uom": "CEL"
+              },
+              {
+                "type": "AbsoluteHumidity",
+                "value": 12.2,
+                "uom": "A93"
+              },
+              {
+                "type": "Speed",
+                "value": 162.0,
+                "uom": "KMH"
+              },
+              {
+                "type": "Illuminance",
+                "value": 802.0,
+                "uom": "LUX"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

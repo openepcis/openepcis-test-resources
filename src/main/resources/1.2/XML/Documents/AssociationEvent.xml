@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epcis:EPCISDocument xmlns:epcis="urn:epcglobal:epcis:xsd:1" xmlns:xalan="http://xml.apache.org/xslt" schemaVersion="1.2" creationDate="2019-11-28T14:59:02.000+01:00">
+  <EPCISBody>
+    <EventList>
+      <extension>
+        <extension>
+          <AssociationEvent>
+            <eventTime>2019-11-06T14:00:00.000+01:00</eventTime>
+            <recordTime>2019-11-06T14:05:00.000+01:00</recordTime>
+            <eventTimeZoneOffset>+01:00</eventTimeZoneOffset>
+            <parentID>urn:epc:id:grai:4012345.55555.98765</parentID>
+            <childEPCs>
+              <epc>urn:epc:id:giai:4000001.12345</epc>
+              <epc>urn:epc:id:giai:4000001.12346</epc>
+            </childEPCs>
+            <childQuantityList>
+              <quantityElement>
+                <epcClass>urn:epc:class:lgtin:4023333.002000.998877</epcClass>
+                <quantity>4</quantity>
+              </quantityElement>
+            </childQuantityList>
+            <action>ADD</action>
+            <bizStep>urn:epcglobal:cbv:bizstep:installing</bizStep>
+            <disposition>urn:epcglobal:cbv:disp:in_progress</disposition>
+            <readPoint>
+              <id>urn:epc:id:sgln:4012345.00001.0</id>
+            </readPoint>
+            <bizLocation>
+              <id>urn:epc:id:sgln:4012345.00002.0</id>
+            </bizLocation>
+            <bizTransactionList>
+              <bizTransaction type="urn:epcglobal:cbv:btt:inv">urn:epcglobal:cbv:bt:4023333000000:54545</bizTransaction>
+            </bizTransactionList>
+            <sensorElementList>
+              <sensorElement>
+                <sensorMetadata startTime="2019-11-06T13:55:00.000+01:00" endTime="2019-11-06T13:57:00.000+01:00" />
+                <sensorReport type="gs1:AbsoluteHumidity" minValue="12.1" maxValue="12.2" uom="A93" />
+              </sensorElement>
+            </sensorElementList>
+          </AssociationEvent>
+        </extension>
+      </extension>
+    </EventList>
+  </EPCISBody>
+</epcis:EPCISDocument>
