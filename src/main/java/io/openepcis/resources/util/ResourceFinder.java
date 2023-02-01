@@ -2,8 +2,12 @@ package io.openepcis.resources.util;
 
 import java.io.File;
 import java.util.*;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+import org.apache.commons.lang3.StringUtils;
 
 /** Class that helps in finding the required resources based on the keyword. */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ResourceFinder {
   // Store all the files and based on provided keyword return the same
   private static final Map<String, List<File>> epcisFiles = new HashMap<>();
@@ -13,11 +17,7 @@ public class ResourceFinder {
     getAllFiles("src/main/resources");
   }
 
-  public static void main(String[] args) {
-    searchEPCISDocument(EpcisVersion.VERSION_1_2, "xml", "ObjectEvent");
-  }
-
-  private static void getAllFiles(String directoryName) {
+  private static void getAllFiles(final String directoryName) {
     final File directory = new File(directoryName);
     final File[] fList = directory.listFiles();
     if (fList != null) {
@@ -40,32 +40,47 @@ public class ResourceFinder {
 
   // Method to concatenate the path in Deque and return the concatenated String
   private static String getDirectoryPath() {
-    String directoryPath = "";
+    StringBuilder directoryPath = new StringBuilder();
     final Iterator<String> pathElements = path.descendingIterator();
     while (pathElements.hasNext()) {
-      directoryPath =
-          directoryPath.equals("")
-              ? pathElements.next()
-              : directoryPath + "/" + pathElements.next();
+      directoryPath.insert(0, pathElements.next());
+      if (pathElements.hasNext()) {
+        directoryPath.insert(0, File.separator);
+      }
     }
-    return directoryPath;
+    return directoryPath.toString();
   }
 
   // Search based on provided version, format and keyword
-  private static List<File> searchEPCISDocument(
-      final EpcisVersion version, final String format, final String keyword) {
-    List<File> filesList = new ArrayList<>();
+  public static List<File> searchEPCISDocument(String version, String format, String keyword) {
+    final List<File> matchingFiles = new ArrayList<>();
+    version = !StringUtils.isBlank(version) ? version : EpcisVersion.VERSION_2_0.getVersion();
+    keyword = !StringUtils.isBlank(keyword) ? keyword.toLowerCase() : "";
+    format = !StringUtils.isBlank(format) ? format.toLowerCase() : "";
 
-    // If version is 1.2 then get files according to that
-    if (EpcisVersion.VERSION_1_2.equals(version)) {
-      for (final Map.Entry<String, List<File>> entry : epcisFiles.entrySet()) {
-        if (entry.getKey().contains(version.getVersion())) {
-          filesList.addAll(entry.getValue());
+    for (final Map.Entry<String, List<File>> entry : epcisFiles.entrySet()) {
+      if (!entry.getKey().contains(version)) {
+        continue;
+      }
+
+      final List<File> files = entry.getValue();
+      boolean keywordMatched = StringUtils.isBlank(keyword);
+      boolean formatMatched = StringUtils.isBlank(format);
+
+      for (File file : files) {
+        if (!keywordMatched && file.getName().toLowerCase().contains(keyword)) {
+          keywordMatched = true;
+        }
+        if (!formatMatched && entry.getKey().toLowerCase().contains(format)) {
+          formatMatched = true;
+        }
+        if (keywordMatched && formatMatched) {
+          matchingFiles.add(file);
+          keywordMatched = false;
+          formatMatched = false;
         }
       }
-      System.out.println(filesList);
-      return filesList;
     }
-    return null;
+    return matchingFiles;
   }
 }
