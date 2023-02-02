@@ -16,25 +16,25 @@ public class ResourceFinderTest {
 
   @Test
   public void findResourceWith12VersionAndFormatTest() {
-    final List<File> filesList = ResourceFinder.searchEPCISDocument("1.2", "xml", "ObjectEvent");
+    final List<File> filesList = ResourceFinder.searchResource("1.2", "xml", "ObjectEvent");
     assertTrue(filesList.size() > 0);
   }
 
   @Test
   public void findResource12WithVersionTest() {
-    final List<File> filesList = ResourceFinder.searchEPCISDocument("1.2", "xml", null);
+    final List<File> filesList = ResourceFinder.searchResource("1.2", "xml", null);
     assertTrue(filesList.size() > 0);
   }
 
   @Test
   public void findResource20WithVersionTest() {
-    final List<File> filesList = ResourceFinder.searchEPCISDocument("1.2", "json", null);
+    final List<File> filesList = ResourceFinder.searchResource("1.2", "json", null);
     assertEquals(filesList.size(), 0);
   }
 
   @Test
   public void findResource20WithVersionKeywordTest() {
-    final List<File> filesList = ResourceFinder.searchEPCISDocument("2.0", "json", "error");
+    final List<File> filesList = ResourceFinder.searchResource("2.0", "json", "error");
     assertTrue(filesList.size() > 0);
   }
 }

@@ -61,7 +61,7 @@ public class ResourceFinder {
   }
 
   // Search based on provided version, format and keyword
-  public static List<File> searchEPCISDocument(String version, String format, String keyword) {
+  public static List<File> searchResource(String version, String format, String keyword) {
     final List<File> matchingFiles = new ArrayList<>();
     version = !StringUtils.isBlank(version) ? version : EpcisVersion.VERSION_2_0.getVersion();
     keyword = !StringUtils.isBlank(keyword) ? keyword.toLowerCase() : "";
