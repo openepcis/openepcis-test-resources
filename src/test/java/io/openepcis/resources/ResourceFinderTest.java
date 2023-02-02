@@ -1,5 +1,6 @@
 package io.openepcis.resources;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import io.openepcis.resources.util.ResourceFinder;
@@ -28,7 +29,7 @@ public class ResourceFinderTest {
   @Test
   public void findResource20WithVersionTest() {
     final List<File> filesList = ResourceFinder.searchEPCISDocument("1.2", "json", null);
-    assertTrue(filesList.size() > 0);
+    assertEquals(filesList.size(), 0);
   }
 
   @Test

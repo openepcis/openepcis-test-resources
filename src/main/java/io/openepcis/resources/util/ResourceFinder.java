@@ -6,7 +6,7 @@ import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 
-/** Class that helps in finding the required resources based on the keyword. */
+/** Class that helps in finding the required resources based on the version, format, keyword. */
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ResourceFinder {
   // Store all the files and based on provided keyword return the same
@@ -20,16 +20,25 @@ public class ResourceFinder {
   private static void getAllFiles(final String directoryName) {
     final File directory = new File(directoryName);
     final File[] fList = directory.listFiles();
+
+    // Accept only the filesList without null
     if (fList != null) {
+      // Loop through the filesList and store
       for (File file : fList) {
-        if (file.isFile() && !file.getName().equals(".DS_Store")) {
+        // Ignore if not file and hidden files
+        if (file.isFile() && !file.isHidden()) {
+          // Get the list of files based on the directory
           List<File> existingFiles = epcisFiles.get(getDirectoryPath());
+
           if (existingFiles == null) {
             existingFiles = new ArrayList<>();
           }
+
+          // Store the files to Map
           existingFiles.add(file);
           epcisFiles.put(getDirectoryPath(), existingFiles);
         } else if (file.isDirectory()) {
+          // If directory then recurse and find files
           path.push(file.getName());
           getAllFiles(file.getAbsolutePath());
           path.pop();
@@ -40,7 +49,7 @@ public class ResourceFinder {
 
   // Method to concatenate the path in Deque and return the concatenated String
   private static String getDirectoryPath() {
-    StringBuilder directoryPath = new StringBuilder();
+    final StringBuilder directoryPath = new StringBuilder();
     final Iterator<String> pathElements = path.descendingIterator();
     while (pathElements.hasNext()) {
       directoryPath.insert(0, pathElements.next());
@@ -67,13 +76,15 @@ public class ResourceFinder {
       boolean keywordMatched = StringUtils.isBlank(keyword);
       boolean formatMatched = StringUtils.isBlank(format);
 
-      for (File file : files) {
+      for (final File file : files) {
         if (!keywordMatched && file.getName().toLowerCase().contains(keyword)) {
           keywordMatched = true;
         }
+
         if (!formatMatched && entry.getKey().toLowerCase().contains(format)) {
           formatMatched = true;
         }
+
         if (keywordMatched && formatMatched) {
           matchingFiles.add(file);
           keywordMatched = false;
