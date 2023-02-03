@@ -1,21 +1,63 @@
 {
   "@context": [
-    "https://gs1.github.io/EPCIS/epcis-context.jsonld",
+    "https://ref.gs1.org/standards/epcis/2.0.0/epcis-context.jsonld"
+  ],
+  "type": "AssociationEvent",
+  "eventTime": "2019-11-06T14:00:00+01:00",
+  "eventTimeZoneOffset": "+01:00",
+  "recordTime": "2019-11-06T14:05:00+01:00",
+  "parentID": "urn:epc:id:grai:4012345.55555.98765",
+  "childEPCs": [
+    "urn:epc:id:giai:4000001.12345",
+    "urn:epc:id:giai:4000001.12346"
+  ],
+  "childQuantityList": [
     {
-      "example": "http://ns.example.com/epcis/"
+      "epcClass": "urn:epc:class:lgtin:4023333.002000.998877",
+      "quantity": 4
     }
   ],
-  "eventID": "ni:///sha-256;025ac144187a8c5e14caf4d1cfa69250a33dc59a5bc42a68d31b1b5e55a3f15a?ver=CBV2.0",
-  "type": "AssociationEvent",
-  "eventTime": "2019-11-01T14:00:00.000+01:00",
-  "eventTimeZoneOffset": "+01:00",
-  "parentID": "urn:epc:id:grai:4012345.55555.987",
-  "childEPCs": [
-    "urn:epc:id:giai:4000001.12345"
-  ],
   "action": "ADD",
-  "bizStep": "assembling",
+  "bizStep": "installing",
+  "disposition": "in_progress",
   "readPoint": {
     "id": "urn:epc:id:sgln:4012345.00001.0"
-  }
+  },
+  "bizLocation": {
+    "id": "urn:epc:id:sgln:4012345.00002.0"
+  },
+  "bizTransactionList": [
+    {
+      "type": "inv",
+      "bizTransaction": "urn:epcglobal:cbv:bt:4023333000000:54545"
+    }
+  ],
+  "sourceList": [
+    {
+      "type": "possessing_party",
+      "source": "urn:epc:id:pgln:4000001.00012"
+    }
+  ],
+  "destinationList": [
+    {
+      "type": "possessing_party",
+      "destination": "urn:epc:id:pgln:4012345.00000"
+    }
+  ],
+  "sensorElementList": [
+    {
+      "sensorMetadata": {
+        "startTime": "2019-11-06T13:55:00+01:00",
+        "endTime": "2019-11-06T13:57:00+01:00"
+      },
+      "sensorReport": [
+        {
+          "type": "AbsoluteHumidity",
+          "minValue": 12.1,
+          "maxValue": 12.2,
+          "uom": "A93"
+        }
+      ]
+    }
+  ]
 }

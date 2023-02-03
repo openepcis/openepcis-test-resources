@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<epcis:EPCISDocument xmlns:epcis="urn:epcglobal:epcis:xsd:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cbvmda="urn:epcglobal:cbv:mda:" schemaVersion="2.0" creationDate="2020-07-03T00:05:00-06:00">
+    <EPCISBody>
+        <EventList>
+            <TransactionEvent xmlns:ns1="urn:epcglobal:epcis-query:xsd:2" xmlns:ns2="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:example="http://ns.example.com/epcis/">
+                <eventTime>2020-07-03T00:05:00-06:00</eventTime>
+                <eventTimeZoneOffset>-06:00</eventTimeZoneOffset>
+                <eventID>ni:///sha-256;8702ac80df8ac48d19cc0c8d19399249fc7037f8b752acb97baf7148960d2a17?ver=CBV2.0</eventID>
+                <bizTransactionList>
+                    <bizTransaction type="urn:epcglobal:cbv:btt:po">urn:epcglobal:cbv:bt:4012345123456:RE100099</bizTransaction>
+                </bizTransactionList>
+                <epcList>
+                    <epc>urn:epc:id:sgtin:0614141.107340.1</epc>
+                    <epc>urn:epc:id:sgtin:0614141.107340.2</epc>
+                </epcList>
+                <action>ADD</action>
+                <bizStep>urn:epcglobal:cbv:bizstep:inspecting</bizStep>
+                <disposition>urn:epcglobal:cbv:disp:needs_replacement</disposition>
+                <readPoint>
+                    <id>urn:epc:id:sgln:4012345.00000.5</id>
+                </readPoint>
+                <sensorElementList>
+                    <sensorElement>
+                        <sensorMetadata time="2019-04-02T13:05:00Z" deviceID="urn:epc:id:giai:4000001.111" deviceMetadata="https://id.gs1.org/8004/4000001111" rawData="https://example.org/8004/401234599999" />
+                        <sensorReport type="gs1:Temperature" value="26.0" uom="CEL" />
+                        <sensorReport type="gs1:AbsoluteHumidity" value="12.1" uom="A93" />
+                        <sensorReport type="gs1:Speed" value="160.0" uom="KMH" />
+                        <sensorReport type="gs1:Illuminance" value="800.0" uom="LUX" />
+                    </sensorElement>
+                    <sensorElement>
+                        <sensorMetadata time="2019-04-02T13:35:00Z" deviceID="urn:epc:id:giai:4000001.111" deviceMetadata="https://id.gs1.org/8004/4000001111" rawData="https://example.org/8004/401234599999" />
+                        <sensorReport type="gs1:Temperature" value="26.1" uom="CEL" />
+                        <sensorReport type="gs1:AbsoluteHumidity" value="12.2" uom="A93" />
+                        <sensorReport type="gs1:Speed" value="161.0" uom="KMH" />
+                        <sensorReport type="gs1:Illuminance" value="801.0" uom="LUX" />
+                    </sensorElement>
+                    <sensorElement>
+                        <sensorMetadata time="2019-04-02T13:55:00Z" deviceID="urn:epc:id:giai:4000001.111" deviceMetadata="https://id.gs1.org/8004/4000001111" rawData="https://example.org/8004/401234599999" />
+                        <sensorReport type="gs1:Temperature" value="26.2" uom="CEL" />
+                        <sensorReport type="gs1:AbsoluteHumidity" value="12.2" uom="A93" />
+                        <sensorReport type="gs1:Speed" value="162.0" uom="KMH" />
+                        <sensorReport type="gs1:Illuminance" value="802.0" uom="LUX" />
+                    </sensorElement>
+                </sensorElementList>
+            </TransactionEvent>
+        </EventList>
+    </EPCISBody>
+</epcis:EPCISDocument>

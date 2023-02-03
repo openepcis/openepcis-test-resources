@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<epcis:EPCISDocument xmlns:epcis="urn:epcglobal:epcis:xsd:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cbvmda="urn:epcglobal:cbv:mda:" schemaVersion="2.0"
+                     creationDate="2019-11-06T14:00:00.000+01:00">
+    <EPCISBody>
+        <EventList>
+            <AssociationEvent xmlns:ns1="urn:epcglobal:epcis-query:xsd:2" xmlns:ns2="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
+                              xmlns:example="http://ns.example.com/epcis/">
+                <eventTime>2019-11-06T14:00:00+01:00</eventTime>
+                <eventTimeZoneOffset>+01:00</eventTimeZoneOffset>
+                <recordTime>2019-11-06T14:05:00+01:00</recordTime>
+                <eventID>ni:///sha-256;5f7c472bc4905de27a19b2efc8e4a9c6dc195139669b80b515f12218ff07cf65?ver=CBV2.0</eventID>
+                <parentID>urn:epc:id:grai:4012345.55555.98765</parentID>
+                <childEPCs>
+                    <epc>urn:epc:id:giai:4000001.12345</epc>
+                    <epc>urn:epc:id:giai:4000001.12346</epc>
+                </childEPCs>
+                <childQuantityList>
+                    <quantityElement>
+                        <epcClass>urn:epc:class:lgtin:4023333.002000.998877</epcClass>
+                        <quantity>4.0</quantity>
+                    </quantityElement>
+                </childQuantityList>
+                <action>ADD</action>
+                <bizStep>urn:epcglobal:cbv:bizstep:installing</bizStep>
+                <disposition>urn:epcglobal:cbv:disp:in_progress</disposition>
+                <readPoint>
+                    <id>urn:epc:id:sgln:4012345.00001.0</id>
+                </readPoint>
+                <bizLocation>
+                    <id>urn:epc:id:sgln:4012345.00002.0</id>
+                </bizLocation>
+                <bizTransactionList>
+                    <bizTransaction type="urn:epcglobal:cbv:btt:inv">urn:epcglobal:cbv:bt:4023333000000:54545</bizTransaction>
+                </bizTransactionList>
+                <sourceList>
+                    <source type="urn:epcglobal:cbv:sdt:possessing_party">urn:epc:id:pgln:4000001.00012</source>
+                </sourceList>
+                <destinationList>
+                    <destination type="urn:epcglobal:cbv:sdt:possessing_party">urn:epc:id:pgln:4012345.00000</destination>
+                </destinationList>
+                <sensorElementList>
+                    <sensorElement>
+                        <sensorMetadata startTime="2019-11-06T12:55:00Z" endTime="2019-11-06T12:57:00Z"/>
+                        <sensorReport type="gs1:AbsoluteHumidity" minValue="12.1" maxValue="12.2" uom="A93"/>
+                    </sensorElement>
+                </sensorElementList>
+            </AssociationEvent>
+        </EventList>
+    </EPCISBody>
+</epcis:EPCISDocument>

@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://ref.gs1.org/standards/epcis/2.0.0/epcis-context.jsonld",
+    {
+      "example": "http://ns.example.com/epcis"
+    }
+  ],
+  "type": "EPCISDocument",
+  "schemaVersion": "2.0",
+  "creationDate": "2005-07-11T11:30:47.0Z",
+  "epcisBody": {
+    "eventList": [
+      {
+        "type": "AssociationEvent",
+        "eventTime": "2019-11-01T14:00:00+01:00",
+        "eventTimeZoneOffset": "+01:00",
+        "parentID": "urn:epc:id:grai:4012345.55555.987",
+        "childEPCs": [
+          "urn:epc:id:giai:4000001.12345"
+        ],
+        "action": "ADD",
+        "bizStep": "assembling",
+        "readPoint": {
+          "id": "urn:epc:id:sgln:4012345.00001.0"
+        },
+        "example:myField": "Example of a vendor/user extension",
+        "extension": {
+          "example:extension": {
+            "moreExtensions": {
+              "futureExtension": {
+                "tag1": "1",
+                "tag2": "2",
+                "tag3": "3"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

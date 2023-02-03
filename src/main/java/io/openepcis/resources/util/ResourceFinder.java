@@ -1,5 +1,6 @@
 package io.openepcis.resources.util;
 
+import io.openepcis.constants.EPCIS;
 import java.io.File;
 import java.util.*;
 import lombok.AccessLevel;
@@ -60,12 +61,22 @@ public class ResourceFinder {
     return directoryPath.toString();
   }
 
-  // Search based on provided version, format and keyword
-  public static List<File> searchResource(String version, String format, String keyword) {
+  /**
+   * Method to search the resources list based on provided version, format, type, and keyword.
+   *
+   * @param version Document/event in required EPCIS version. Either 1.2 or 2.0
+   * @param format Document/event in required EPCIS format. Either XML/JSON.
+   * @param type Document/event type. Either Capture/Query.
+   * @param keyword Document/event consisting of specific info ex: error, userExtension, sensorData,
+   *     etc.
+   */
+  public static List<File> searchResource(
+      String version, String format, String type, String keyword) {
     final List<File> matchingFiles = new ArrayList<>();
-    version = !StringUtils.isBlank(version) ? version : EpcisVersion.VERSION_2_0.getVersion();
+    version = !StringUtils.isBlank(version) ? version : EPCIS.SCHEMA_VERSION_2_0;
     keyword = !StringUtils.isBlank(keyword) ? keyword.toLowerCase() : "";
     format = !StringUtils.isBlank(format) ? format.toLowerCase() : "";
+    type = !StringUtils.isBlank(type) ? type.toLowerCase() : EPCIS.CAPTURE.toLowerCase();
 
     for (final Map.Entry<String, List<File>> entry : epcisFiles.entrySet()) {
       if (!entry.getKey().contains(version)) {
@@ -75,6 +86,7 @@ public class ResourceFinder {
       final List<File> files = entry.getValue();
       boolean keywordMatched = StringUtils.isBlank(keyword);
       boolean formatMatched = StringUtils.isBlank(format);
+      boolean typeMatched = StringUtils.isBlank(type);
 
       for (final File file : files) {
         if (!keywordMatched && file.getName().toLowerCase().contains(keyword)) {
@@ -85,7 +97,11 @@ public class ResourceFinder {
           formatMatched = true;
         }
 
-        if (keywordMatched && formatMatched) {
+        if (!typeMatched && entry.getKey().toLowerCase().contains(type)) {
+          typeMatched = true;
+        }
+
+        if (keywordMatched && formatMatched && typeMatched) {
           matchingFiles.add(file);
           keywordMatched = false;
           formatMatched = false;

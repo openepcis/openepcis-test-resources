@@ -1,20 +1,19 @@
 {
   "@context": [
-    "https://gs1.github.io/EPCIS/epcis-context.jsonld",
+    "https://ref.gs1.org/standards/epcis/2.0.0/epcis-context.jsonld",
     {
       "example": "http://ns.example.com/epcis/"
     }
   ],
-  "eventID": "ni:///sha-256;00e1e6eba3a7cc6125be4793a631f0af50f8322e0ab5f2c0bab994a11cec1d79?ver=CBV2.0",
   "type": "ObjectEvent",
-  "action": "OBSERVE",
-  "bizStep": "receiving",
-  "disposition": "in_progress",
+  "eventTime": "2005-04-04T20:33:31.116-06:00",
+  "eventTimeZoneOffset": "-06:00",
   "epcList": [
     "urn:epc:id:sgtin:0614141.107346.2018"
   ],
-  "eventTime": "2005-04-04T20:33:31.116-06:00",
-  "eventTimeZoneOffset": "-06:00",
+  "action": "OBSERVE",
+  "bizStep": "receiving",
+  "disposition": "in_progress",
   "readPoint": {
     "id": "urn:epc:id:sgln:0012345.11111.400"
   },

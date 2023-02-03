@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<epcis:EPCISDocument xmlns:epcis="urn:epcglobal:epcis:xsd:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cbvmda="urn:epcglobal:cbv:mda:" schemaVersion="2.0"
+                     creationDate="2022-01-20T10:41:49.296Z">
+    <EPCISBody>
+        <EventList>
+            <TransformationEvent xmlns:ns1="urn:epcglobal:epcis-query:xsd:2" xmlns:ns2="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
+                                 xmlns:example2="https://ns.example2.com/epcis/" xmlns:example="https://ns.example.com/epcis/" xmlns:example4="https://ns.example4.com/epcis/"
+                                 xmlns:example1="https://ns.example1.com/epcis/" xmlns:example3="https://ns.example3.com/epcis/">
+                <eventTime>2020-09-29T12:00:00Z</eventTime>
+                <eventTimeZoneOffset>+02:00</eventTimeZoneOffset>
+                <errorDeclaration>
+                    <declarationTime>2020-09-29T13:00Z</declarationTime>
+                    <example:issuer>Employee 123</example:issuer>
+                    <example:field>foo bar</example:field>
+                    <example3:errorCodes>
+                        <example3:value1>34</example3:value1>
+                        <example3:value44>66</example3:value44>
+                    </example3:errorCodes>
+                </errorDeclaration>
+                <inputQuantityList>
+                    <quantityElement>
+                        <epcClass>urn:epc:class:lgtin:4023333.055555.ABC123</epcClass>
+                        <quantity>25.0</quantity>
+                        <uom>KGM</uom>
+                    </quantityElement>
+                </inputQuantityList>
+                <outputEPCList>
+                    <epc>urn:epc:id:sgtin:4012345.012345.987</epc>
+                    <epc>urn:epc:id:sgtin:4012345.012345.988</epc>
+                </outputEPCList>
+                <bizStep>urn:epcglobal:cbv:bizstep:commissioning</bizStep>
+                <readPoint>
+                    <id>urn:epc:id:sgln:4023333.00000.0</id>
+                </readPoint>
+                <bizLocation>
+                    <id>urn:epc:id:sgln:4023333.00001.12</id>
+                </bizLocation>
+                <sensorElementList>
+                    <sensorElement>
+                        <sensorMetadata startTime="2019-04-01T14:00:00Z" endTime="2019-04-02T13:59:59.999Z" example:someFurtherMetaData="someText"/>
+                        <sensorReport type="gs1:Temperature" minValue="12.4" maxValue="13.8" meanValue="13.2" sDev="0.41" percRank="50.0" percValue="12.7" uom="CEL"
+                                      example:cv="123"/>
+                        <sensorReport type="example:someSensorProperty" stringValue="someSensorOutput"/>
+                        <example:furtherSensorData>
+                            <example:measure2>0.987</example:measure2>
+                            <example:measure1>123.5</example:measure1>
+                        </example:furtherSensorData>
+                        <example:someUserField>abc123</example:someUserField>
+                    </sensorElement>
+                </sensorElementList>
+                <example4:otherThings>some text</example4:otherThings>
+                <example:internalData>
+                    <example:procedure>A-1</example:procedure>
+                    <example:machine>urn:epc:id:giai:4012345.ABC</example:machine>
+                </example:internalData>
+            </TransformationEvent>
+        </EventList>
+    </EPCISBody>
+</epcis:EPCISDocument>
