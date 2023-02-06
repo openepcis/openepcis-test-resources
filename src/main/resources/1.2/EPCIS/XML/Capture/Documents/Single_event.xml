@@ -1,0 +1,15 @@
+<TransactionEvent>
+    <eventTime>2019-10-04T14:12:00.000+01:00</eventTime>
+    <eventTimeZoneOffset>+01:00</eventTimeZoneOffset>
+    <bizTransactionList>
+        <bizTransaction>urn:epc:id:gdti:95252084.0001.0003555480001000</bizTransaction>
+    </bizTransactionList>
+    <epcList>
+        <epc>urn:epc:id:gsrn:95252084.000000001</epc>
+    </epcList>
+    <action>ADD</action>
+    <bizStep>http://epcis.example.org/hc/bizstep/summarising_discharge</bizStep>
+    <readPoint>
+        <id>urn:epc:id:sgln:9524567.98765.0</id>
+    </readPoint>
+</TransactionEvent>
