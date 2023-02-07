@@ -1,0 +1,35 @@
+<epcis:EPCISDocument schemaVersion="2.0" creationDate="2013-06-04T14:59:02.099+02:00" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                     xmlns:epcis="urn:epcglobal:epcis:xsd:2">
+    <EPCISBody>
+        <EventList>
+            <epcis:ObjectEvent xmlns:epcis="urn:epcglobal:epcis:xsd:2">
+                <epcis:eventTime>2022-04-13T12:35:29.017069617Z</epcis:eventTime>
+                <epcis:recordTime>2022-12-28T10:17:28.647Z</epcis:recordTime>
+                <epcis:eventTimeZoneOffset>+02:00</epcis:eventTimeZoneOffset>
+                <epcis:eventID>urn:uuid:bf602366-6657-49fb-a729-9610ccef086e</epcis:eventID>
+                <epcis:epcList>
+                    <epcis:epc>urn:epc:id:sgtin:0614141.107346.2018</epcis:epc>
+                </epcis:epcList>
+                <epcis:action>ADD</epcis:action>
+                <epcis:bizStep>urn:epcglobal:cbv:bizstep:commissioning</epcis:bizStep>
+                <epcis:readPoint xmlns:epcglobal="urn:epcglobal:xsd:1">
+                    <epcis:id>urn:epc:id:sgln:479602638.000.0</epcis:id>
+                </epcis:readPoint>
+                <epcis:bizLocation xmlns:epcglobal="urn:epcglobal:xsd:1">
+                    <epcis:id>urn:epc:id:sgln:479602638.000.0</epcis:id>
+                </epcis:bizLocation>
+                <epcis:bizTransactionList>
+                    <epcis:bizTransaction type="urn:epcglobal:cbv:btt:po">http://transaction.acme.com/po/12345679
+                    </epcis:bizTransaction>
+                </epcis:bizTransactionList>
+                <epcis:quantityList>
+                    <epcis:quantityElement xmlns:epcglobal="urn:epcglobal:xsd:1">
+                        <epcis:epcClass>urn:epc:class:lgtin:479602638.0024.018o1</epcis:epcClass>
+                        <epcis:quantity>29.0</epcis:quantity>
+                        <epcis:uom>KGM</epcis:uom>
+                    </epcis:quantityElement>
+                </epcis:quantityList>
+            </epcis:ObjectEvent>
+        </EventList>
+    </EPCISBody>
+</epcis:EPCISDocument>
