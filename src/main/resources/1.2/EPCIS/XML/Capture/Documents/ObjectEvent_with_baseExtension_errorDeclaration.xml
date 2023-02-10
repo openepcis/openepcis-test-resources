@@ -1,0 +1,98 @@
+<epcis:EPCISDocument
+        xmlns:epcis="urn:epcglobal:epcis:xsd:1"
+        schemaVersion="1.2" creationDate="2015-04-14T10:24:01.152-04:00">
+    <EPCISBody>
+        <EventList>
+            <ObjectEvent>
+                <eventTime>2023-07-15T10:00:00.000-04:00</eventTime>
+                <eventTimeZoneOffset>-04:00</eventTimeZoneOffset>
+                <epcList>
+                    <epc>urn:epc:id:sgtin:9521141.011111.101</epc>
+                    <epc>urn:epc:id:sgtin:9521141.011111.102</epc>
+                    <epc>urn:epc:id:sgtin:9521141.011111.103</epc>
+                </epcList>
+                <action>OBSERVE</action>
+                <bizStep>urn:epcglobal:cbv:bizstep:shipping</bizStep>
+                <disposition>urn:epcglobal:cbv:disp:in_transit</disposition>
+                <readPoint>
+                    <id>urn:epc:id:sgln:9521141.11111.0</id>
+                </readPoint>
+                <bizTransactionList>
+                    <bizTransaction type="urn:epcglobal:cbv:btt:po">urn:epcglobal:cbv:bt:9521141000005:456</bizTransaction>
+                </bizTransactionList>
+                <extension>
+                    <sourceList>
+                        <source type="urn:epcglobal:cbv:sdt:owning_party">urn:epc:id:sgln:9521141.00000.0</source>
+                    </sourceList>
+                    <destinationList>
+                        <destination type="urn:epcglobal:cbv:sdt:owning_party">urn:epc:id:sgln:9521999.00000.0</destination>
+                    </destinationList>
+                </extension>
+            </ObjectEvent>
+            <ObjectEvent>
+                <eventTime>2023-07-15T10:00:00.000-04:00</eventTime>
+                <eventTimeZoneOffset>-04:00</eventTimeZoneOffset>
+                <baseExtension>
+                    <errorDeclaration>
+                        <declarationTime>2023-07-17T13:00:00.000-04:00</declarationTime>
+                        <reason>urn:epcglobal:cbv:er:incorrect_data</reason>
+                        <correctiveEventIDs>
+                            <correctiveEventID>urn:uuid:6926712e-599f-4c4e-b6e9-8dd888c906bd</correctiveEventID>
+                        </correctiveEventIDs>
+                    </errorDeclaration>
+                </baseExtension>
+                <epcList>
+                    <epc>urn:epc:id:sgtin:9521141.011111.101</epc>
+                    <epc>urn:epc:id:sgtin:9521141.011111.102</epc>
+                    <epc>urn:epc:id:sgtin:9521141.011111.103</epc>
+                </epcList>
+                <action>OBSERVE</action>
+                <bizStep>urn:epcglobal:cbv:bizstep:shipping</bizStep>
+                <disposition>urn:epcglobal:cbv:disp:in_transit</disposition>
+                <readPoint>
+                    <id>urn:epc:id:sgln:9521141.11111.0</id>
+                </readPoint>
+                <bizTransactionList>
+                    <bizTransaction type="urn:epcglobal:cbv:btt:po">urn:epcglobal:cbv:bt:9521141000005:456</bizTransaction>
+                </bizTransactionList>
+                <extension>
+                    <sourceList>
+                        <source type="urn:epcglobal:cbv:sdt:owning_party">urn:epc:id:sgln:9521141.00000.0</source>
+                    </sourceList>
+                    <destinationList>
+                        <destination type="urn:epcglobal:cbv:sdt:owning_party">urn:epc:id:sgln:9521999.00000.0</destination>
+                    </destinationList>
+                </extension>
+            </ObjectEvent>
+            <ObjectEvent>
+                <eventTime>2023-07-15T10:00:00.000-04:00</eventTime>
+                <eventTimeZoneOffset>-04:00</eventTimeZoneOffset>
+                <baseExtension>
+                    <eventID>urn:uuid:6926712e-599f-4c4e-b6e9-8dd888c906bd</eventID>
+                </baseExtension>
+                <epcList>
+                    <epc>urn:epc:id:sgtin:9521141.011111.101</epc>
+                    <epc>urn:epc:id:sgtin:9521141.011111.102</epc>
+                    <epc>urn:epc:id:sgtin:9521141.011111.103</epc>
+                </epcList>
+                <action>OBSERVE</action>
+                <bizStep>urn:epcglobal:cbv:bizstep:shipping</bizStep>
+                <disposition>urn:epcglobal:cbv:disp:in_transit</disposition>
+                <readPoint>
+                    <id>urn:epc:id:sgln:9521141.11111.0</id>
+                </readPoint>
+                <bizTransactionList>
+                    <bizTransaction type="urn:epcglobal:cbv:btt:po">urn:epcglobal:cbv:bt:9521141000005:123</bizTransaction>
+                </bizTransactionList>
+                <extension>
+                    <sourceList>
+                        <source type="urn:epcglobal:cbv:sdt:owning_party">urn:epc:id:sgln:9521141.00000.0</source>
+                    </sourceList>
+                    <destinationList>
+                        <destination type="urn:epcglobal:cbv:sdt:owning_party">urn:epc:id:sgln:9521999.00000.0</destination>
+                    </destinationList>
+                </extension>
+            </ObjectEvent>
+        </EventList>
+    </EPCISBody>
+</epcis:EPCISDocument>
