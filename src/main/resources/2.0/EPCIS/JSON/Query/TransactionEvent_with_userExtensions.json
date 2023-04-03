@@ -1,0 +1,64 @@
+{
+  "@context": [
+    "https://ref.gs1.org/standards/epcis/2.0.0/epcis-context.jsonld",
+    {
+      "example": "http://ns.example.com/epcis/"
+    }
+  ],
+  "id": "https://id.example.org/document1",
+  "type": "EPCISQueryDocument",
+  "schemaVersion": "2.0",
+  "creationDate": "2005-07-11T11:30:47.0Z",
+  "epcisBody": {
+    "queryResults": {
+      "subscriptionID": "32d2aec1-a6d2-46d9-900a-24124288cce1",
+      "queryName": "SimpleEventQuery",
+      "resultsBody": {
+        "eventList": [
+          {
+            "type": "TransactionEvent",
+            "eventTime": "2020-07-03T00:05:00-06:00",
+            "eventTimeZoneOffset": "-06:00",
+            "bizTransactionList": [
+              {
+                "type": "po",
+                "bizTransaction": "urn:epcglobal:cbv:bt:4012345123456:RE100099"
+              }
+            ],
+            "epcList": [
+              "urn:epc:id:sgtin:0614141.107340.1",
+              "urn:epc:id:sgtin:0614141.107340.2"
+            ],
+            "action": "ADD",
+            "bizStep": "inspecting",
+            "disposition": "needs_replacement",
+            "readPoint": {
+              "id": "urn:epc:id:sgln:4012345.00000.5"
+            },
+            "sensorElementList": [
+              {
+                "sensorReport": [
+                  {
+                    "type": "EffectiveDoseRate",
+                    "value": 0.005,
+                    "uom": "P71"
+                  }
+                ]
+              }
+            ],
+            "example:myField": "Example of a vendor/user extension",
+            "example:extension": {
+              "moreExtensions": {
+                "futureExtension": {
+                  "tag1": "1",
+                  "tag2": "2",
+                  "tag3": "3"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

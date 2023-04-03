@@ -1,0 +1,203 @@
+{
+  "@context": [
+    "https://ref.gs1.org/standards/epcis/2.0.0/epcis-context.jsonld",
+    {
+      "ext1": "http://example.com/ext1/"
+    }
+  ],
+  "id": "https://id.example.org/document1",
+  "type": "EPCISQueryDocument",
+  "schemaVersion": "2.0",
+  "creationDate": "2005-07-11T11:30:47.0Z",
+  "epcisBody": {
+    "queryResults": {
+      "subscriptionID": "32d2aec1-a6d2-46d9-900a-24124288cce1",
+      "queryName": "SimpleEventQuery",
+      "resultsBody": {
+        "eventList": [
+          {
+            "type": "ObjectEvent",
+            "eventTime": "2021-05-27T14:00:00+01:00",
+            "eventTimeZoneOffset": "+01:00",
+            "epcList": [
+              "https://id.example.com/8003/040123450007718765"
+            ],
+            "action": "OBSERVE",
+            "bizStep": "https://ref.gs1.org/cbv/Bizstep-sensor_reporting",
+            "readPoint": {
+              "id": "https://id.example.com/414/4012345000054"
+            },
+            "sensorElementList": [
+              {
+                "sensorMetadata": {
+                  "time": "2021-05-27T13:50:00+01:00"
+                },
+                "sensorReport": [
+                  {
+                    "type": "Length",
+                    "coordinateReferenceSystem": "http://www.opengis.net/def/crs/EPSG/0/27700",
+                    "value": -477979.89,
+                    "component": "cbv:Comp-northing",
+                    "uom": "MTR"
+                  },
+                  {
+                    "type": "Length",
+                    "coordinateReferenceSystem": "http://www.opengis.net/def/crs/EPSG/0/27700",
+                    "value": 2477583.57,
+                    "component": "cbv:Comp-easting",
+                    "uom": "MTR"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "AggregationEvent",
+            "eventTime": "2020-06-08T18:11:16Z",
+            "eventTimeZoneOffset": "+02:00",
+            "parentID": "urn:epc:id:sgtin:952001.1012345.22222223333",
+            "childEPCs": [
+              "urn:epc:id:sgtin:9520001.012346.10000001001"
+            ],
+            "action": "DELETE",
+            "bizStep": "unpacking",
+            "disposition": "in_progress",
+            "readPoint": {
+              "id": "urn:epc:id:sgln:9529999.99999.0"
+            },
+            "bizLocation": {
+              "id": "urn:epc:id:sgln:9529999.99999.0"
+            },
+            "persistentDisposition": {
+              "set": [
+                "completeness_verified"
+              ],
+              "unset": [
+                "completeness_inferred"
+              ]
+            }
+          },
+          {
+            "type": "TransactionEvent",
+            "eventTime": "2019-10-04T14:12:00+01:00",
+            "eventTimeZoneOffset": "+01:00",
+            "bizTransactionList": [
+              {
+                "bizTransaction": "urn:epc:id:gdti:95252084.0001.0003555480001000"
+              }
+            ],
+            "epcList": [
+              "urn:epc:id:gsrn:95252084.000000001"
+            ],
+            "action": "ADD",
+            "bizStep": "http://epcis.example.org/hc/bizstep/summarising_discharge",
+            "readPoint": {
+              "id": "urn:epc:id:sgln:9524567.98765.0"
+            }
+          },
+          {
+            "type": "TransformationEvent",
+            "eventTime": "2013-10-31T14:58:56.591Z",
+            "eventTimeZoneOffset": "+02:00",
+            "inputEPCList": [
+              "urn:epc:id:sgtin:4012345.011122.25",
+              "urn:epc:id:sgtin:4000001.065432.99886655"
+            ],
+            "inputQuantityList": [
+              {
+                "epcClass": "urn:epc:class:lgtin:4012345.011111.4444",
+                "quantity": 10,
+                "uom": "KGM"
+              },
+              {
+                "epcClass": "urn:epc:class:lgtin:0614141.077777.987",
+                "quantity": 30
+              },
+              {
+                "epcClass": "urn:epc:idpat:sgtin:4012345.066666.*",
+                "quantity": 220
+              }
+            ],
+            "outputEPCList": [
+              "urn:epc:id:sgtin:4012345.077889.25",
+              "urn:epc:id:sgtin:4012345.077889.26",
+              "urn:epc:id:sgtin:4012345.077889.27",
+              "urn:epc:id:sgtin:4012345.077889.28"
+            ],
+            "persistentDisposition": {
+              "set": [
+                "completeness_verified"
+              ],
+              "unset": [
+                "completeness_inferred"
+              ]
+            },
+            "ext1:float": "20",
+            "ext1:time": "2013-06-08T14:58:56.591Z",
+            "ext1:boolean": "true",
+            "ext1:default": "stringAsDefaultValue",
+            "ext1:int": "10",
+            "ext1:string": "string"
+          },
+          {
+            "type": "AssociationEvent",
+            "eventTime": "2019-11-04T14:00:00+01:00",
+            "eventTimeZoneOffset": "+01:00",
+            "errorDeclaration": {
+              "declarationTime": "2019-11-07T14:00:00Z",
+              "reason": "incorrect_data",
+              "correctiveEventIDs": [
+                "urn:uuid:fd338495-0e6d-41dd-afee-a862ecd32518"
+              ]
+            },
+            "parentID": "urn:epc:id:grai:4012345.55555.987",
+            "action": "DELETE",
+            "bizStep": "disassembling",
+            "readPoint": {
+              "id": "urn:epc:id:sgln:4012345.00002.0"
+            }
+          },
+          {
+            "type": "AssociationEvent",
+            "eventTime": "2019-11-04T14:00:00+01:00",
+            "eventTimeZoneOffset": "+01:00",
+            "eventID": "urn:uuid:fd338495-0e6d-41dd-afee-a862ecd32518",
+            "parentID": "urn:epc:id:grai:4012345.55555.987",
+            "childEPCs": [
+              "urn:epc:id:giai:4000001.12345",
+              "urn:epc:id:giai:4000001.12346"
+            ],
+            "action": "DELETE",
+            "bizStep": "disassembling",
+            "readPoint": {
+              "id": "urn:epc:id:sgln:4012345.00002.0"
+            },
+            "sensorElementList": [
+              {
+                "sensorMetadata": {
+                  "time": "2021-05-27T13:50:00+01:00"
+                },
+                "sensorReport": [
+                  {
+                    "type": "Length",
+                    "coordinateReferenceSystem": "http://www.opengis.net/def/crs/EPSG/0/27700",
+                    "value": -477979.89,
+                    "component": "cbv:Comp-northing",
+                    "uom": "MTR"
+                  },
+                  {
+                    "type": "Length",
+                    "coordinateReferenceSystem": "http://www.opengis.net/def/crs/EPSG/0/27700",
+                    "value": 2477583.57,
+                    "component": "cbv:Comp-easting",
+                    "uom": "MTR"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

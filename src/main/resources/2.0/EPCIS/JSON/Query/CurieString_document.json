@@ -1,0 +1,96 @@
+{
+  "@context": [
+    "https://ref.gs1.org/standards/epcis/2.0.0/epcis-context.jsonld",
+    {
+      "ext1": "https://ns.ext.de/epcis/"
+    }
+  ],
+  "id": "https://id.example.org/document1",
+  "type": "EPCISQueryDocument",
+  "schemaVersion": "2.0",
+  "creationDate": "2005-07-11T11:30:47.0Z",
+  "epcisBody": {
+    "queryResults": {
+      "subscriptionID": "32d2aec1-a6d2-46d9-900a-24124288cce1",
+      "queryName": "SimpleEventQuery",
+      "resultsBody": {
+        "eventList": [
+          {
+            "type": "ObjectEvent",
+            "eventTime": "2023-01-11T12:00:00+01:00",
+            "eventTimeZoneOffset": "+01:00",
+            "certificationInfo": "https://accreditation-council.example.org/certificate/ABC12345",
+            "epcList": [
+              "https://id.gs1.de/01/04012345999990/21/XYZ-1234"
+            ],
+            "action": "OBSERVE",
+            "bizStep": "receiving",
+            "disposition": "in_progress",
+            "readPoint": {
+              "id": "https://id.gs1.de/414/4012345000115"
+            },
+            "bizTransactionList": [
+              {
+                "type": "desadv",
+                "bizTransaction": "http://transaction.acme.com/po/12345678"
+              },
+              {
+                "type": "bol",
+                "bizTransaction": "urn:epcglobal:cbv:bt:0614141073467:1152"
+              }
+            ],
+            "sourceList": [
+              {
+                "type": "location",
+                "source": "urn:epc:id:sgln:4012345.00225.0"
+              },
+              {
+                "type": "possessing_party",
+                "source": "urn:epc:id:pgln:4012345.00225"
+              },
+              {
+                "type": "owning_party",
+                "source": "urn:epc:id:pgln:4012345.00225"
+              }
+            ],
+            "destinationList": [
+              {
+                "type": "location",
+                "destination": "urn:epc:id:sgln:0614141.00777.0"
+              },
+              {
+                "type": "possessing_party",
+                "destination": "urn:epc:id:pgln:0614141.00777"
+              },
+              {
+                "type": "owning_party",
+                "destination": "urn:epc:id:pgln:0614141.00777"
+              },
+              {
+                "type": "cbv:my_own_party",
+                "destination": "urn:epc:id:pgln:0614141.00777"
+              }
+            ],
+            "sensorElementList": [
+              {
+                "sensorMetadata": {
+                  "time": "2023-01-11T11:05:00Z",
+                  "bizRules": "https://id.example.com/253/4012345000054987",
+                  "ext1:someFurtherMetadata": "metadataText"
+                },
+                "sensorReport": [
+                  {
+                    "type": "Dimensionless",
+                    "exception": "gs1:ALARM_CONDITION",
+                    "coordinateReferenceSystem": "http://www.opengis.net/def/crs/EPSG/0/27700",
+                    "ext1:someFurtherReportData": "reportText"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
