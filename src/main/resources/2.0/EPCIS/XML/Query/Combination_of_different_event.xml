@@ -9,10 +9,10 @@
                         <eventTime>2021-05-27T14:00:00.000+01:00</eventTime>
                         <eventTimeZoneOffset>+01:00</eventTimeZoneOffset>
                         <epcList>
-                            <epc>https://id.example.com/8003/040123450007718765</epc>
+                            <epc>https://id.example.com/8003/030013450007718765</epc>
                         </epcList>
                         <action>OBSERVE</action>
-                        <bizStep>https://ref.gs1.org/cbv/Bizstep-sensor_reporting</bizStep>
+                        <bizStep>https://ref.gs1.org/cbv/BizStep-sensor_reporting</bizStep>
                         <readPoint>
                             <id>https://id.example.com/414/4012345000054</id>
                         </readPoint>
@@ -57,7 +57,7 @@
                             <epc>urn:epc:id:gsrn:95252084.000000001</epc>
                         </epcList>
                         <action>ADD</action>
-                        <bizStep>http://epcis.example.org/hc/bizstep/summarising_discharge</bizStep>
+                        <bizStep>ext1:summarising_discharge</bizStep>
                         <readPoint>
                             <id>urn:epc:id:sgln:9524567.98765.0</id>
                         </readPoint>
