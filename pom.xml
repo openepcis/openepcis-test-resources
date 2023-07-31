@@ -31,7 +31,9 @@
 
     <artifactId>openepcis-test-resources</artifactId>
     <name>openepcis-test-resources</name>
-    <description>The project includes a comprehensive collection of EPCIS events in both XML and JSON/JSON-LD formats, intended for various testing purposes.</description>
+    <description>The project includes a comprehensive collection of EPCIS events in both XML and JSON/JSON-LD formats,
+        intended for various testing purposes.
+    </description>
     <url>https://github.com/openepcis/openepcis-test-resources</url>
 
     <licenses>
@@ -82,5 +84,33 @@
         </dependency>
 
     </dependencies>
+
+    <profiles>
+        <profile>
+            <id>generate-resource-file-list</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>3.1.0</version>
+                        <executions>
+                            <execution><!-- generate resource file list -->
+                                <id>Generate resource file list</id>
+                                <phase>generate-sources</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>${basedir}/scripts/generate-file-list.sh</executable>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
 
 </project>

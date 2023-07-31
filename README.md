@@ -5,6 +5,12 @@
 # openepcis-test-resources
 The project encompasses an extensive collection of EPCIS events in both XML and JSON/JSON-LD formats, meticulously crafted to fulfill diverse testing requirements.
 
+## Generate Resource File List
+to generate the latest openepcis-test-resource.list required for initially loading existing test resource, please run:
+```shell
+mvn clean verify -Pgenerate-resource-file-list
+```
+
 ## Introduction
 
 The development of applications that comply with the EPCIS standard requires rigorous testing using a wide spectrum of EPCIS documents and events. This task can be particularly challenging due to 
@@ -18,16 +24,16 @@ Users can easily locate the desired resources by utilizing the `searchResource` 
 As an example, if a user requires an EPCIS 2.0 document/event in JSON/JSON-LD format with an `errorDeclaration`, they can employ the following approach:
 
 ```java
-final List<File> filesList = ResourceFinder.searchResource("2.0", "json", "error");
+final List<URL> filesList = ResourceFinder.searchResource("2.0", "json", "error");
 ```
 
 In a similar manner, if a user requires EPCIS 1.2 documents without any additional parameters, they can use the following approach:
 ```java
-final List<File> filesList = ResourceFinder.searchResource("1.2", "", null);
+final List<URL> filesList = ResourceFinder.searchResource("1.2", "", null);
 ```
 
 Following code returns list of all EPCIS document/events in JSON format for EPCIS 2.0 version
 ```java
-final List<File> filesList = ResourceFinder.searchResource("2.0", "json", "");
+final List<URL> filesList = ResourceFinder.searchResource("2.0", "json", "");
 ```
 </div>
