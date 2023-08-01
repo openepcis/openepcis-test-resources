@@ -222,17 +222,17 @@
             },
             "ext2:string": "stringInObject"
           },
-          "cbvmda:countryOfExport": "KR",
-          "cbvmda:grossWeight": "3.5",
+          "countryOfExport": "KR",
+          "grossWeight": "3.5",
           "ext1:int": "10",
-          "cbvmda:netWeight": "3.5",
+          "netWeight": "3.5",
           "ext1:time": "2013-06-08T14:58:56.591Z",
           "ext1:boolean": "true",
           "ext1:default": "stringAsDefaultValue",
           "ext1:string": "string",
-          "cbvmda:countryOfOrigin": "GB",
-          "cbvmda:drainedWeight": "3.5",
-          "cbvmda:lotNumber": "ABC123"
+          "countryOfOrigin": "GB",
+          "drainedWeight": "3.5",
+          "lotNumber": "ABC123"
         },
         "ext1:float": "20",
         "ext1:time": "2013-06-08T14:58:56.591Z",
