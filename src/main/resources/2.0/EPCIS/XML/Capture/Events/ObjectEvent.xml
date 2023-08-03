@@ -1,5 +1,5 @@
 <ObjectEvent xmlns:epcis="urn:epcglobal:epcis:xsd:2"
-             xmlns:example="http://ns.example.com/epcis"
+             xmlns:example="http://ns.example.com/epcis/"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              creationDate="2005-07-11T11:30:47.0Z"
              schemaVersion="2.0">

@@ -1,7 +1,7 @@
 <TransformationEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                      xmlns:xsd="http://www.w3.org/2001/XMLSchema" creationDate="2020-01-15T07:47:21.677+00:00" schemaVersion="2.0"
                      xmlns:epcis="urn:epcglobal:epcis:xsd:2"
-                     xmlns:example="http://ns.example.com/epcis">
+                     xmlns:example="http://ns.example.com/epcis/">
     <eventTime>2020-01-14T00:00:00+01:00</eventTime>
     <eventTimeZoneOffset>+01:00</eventTimeZoneOffset>
     <eventID>urn:uuid:374d95fc-9457-4a51-bd6a-0bba133845a8</eventID>

@@ -40,7 +40,7 @@
 /2.0/EPCIS/JSON/Capture/Documents/ObjectEvent_with_userExtensions.json
 /2.0/EPCIS/JSON/Capture/Documents/SensorData_and_extension.json
 /2.0/EPCIS/JSON/Capture/Documents/SensorData_with_combined_events.json
-/2.0/EPCIS/JSON/Capture/Documents/TransactionEvent.jsonld
+/2.0/EPCIS/JSON/Capture/Documents/TransactionEvent.json
 /2.0/EPCIS/JSON/Capture/Documents/TransactionEvent_all_possible_fields.json
 /2.0/EPCIS/JSON/Capture/Documents/TransactionEvent_with_sensorData.json
 /2.0/EPCIS/JSON/Capture/Documents/TransactionEvent_with_userExtensions.json
@@ -53,7 +53,7 @@
 /2.0/EPCIS/JSON/Capture/Events/AggregationEvent.json
 /2.0/EPCIS/JSON/Capture/Events/AssociationEvent.json
 /2.0/EPCIS/JSON/Capture/Events/ObjectEvent.json
-/2.0/EPCIS/JSON/Capture/Events/TransactionEvent.jsonld
+/2.0/EPCIS/JSON/Capture/Events/TransactionEvent.json
 /2.0/EPCIS/JSON/Capture/Events/TransformationEvent.json
 /2.0/EPCIS/JSON/Query/Combination_of_different_event.json
 /2.0/EPCIS/JSON/Query/CurieString_document.json
