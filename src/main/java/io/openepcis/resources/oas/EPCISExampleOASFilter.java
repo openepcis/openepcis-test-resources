@@ -19,6 +19,8 @@ public class EPCISExampleOASFilter implements OASFilter {
   public static final String EXAMPLE_1_2_0_XML_DOCUMENT = "xml1.2Document";
   public static final String EXAMPLE_2_0_0_JSON_DOCUMENT = "jsonDocument";
   public static final String EXAMPLE_2_0_0_JSON_EVENT_LIST = "jsonEventsList";
+
+  public static final String EXAMPLE_2_0_0_XML_OBJECT_EVENT = "xmlObjectEvent";
   private final ObjectMapper objectMapper = new ObjectMapper();
 
   @Override
@@ -57,6 +59,15 @@ public class EPCISExampleOASFilter implements OASFilter {
                             "1.2/EPCIS/XML/Capture/Documents/All_eventTypes_in_single_document.xml"))
                 .readAllBytes());
 
+    final String epcisXmlObjectEvent =
+            new String(
+                    Objects.requireNonNull(
+                                    getClass()
+                                            .getClassLoader()
+                                            .getResourceAsStream(
+                                                    "2.0/EPCIS/XML/Capture/Events/ObjectEvent.xml"))
+                            .readAllBytes());
+
     // EPCIS events in JSON/JSON-LD format
     final String epcisJsonEvents =
         new String(
@@ -69,13 +80,23 @@ public class EPCISExampleOASFilter implements OASFilter {
 
     // EPCIS events list in JSON/JSON-LD format
     final String epcisJsonEventsList =
+            "[\n".concat(
         new String(
             Objects.requireNonNull(
                     getClass()
                         .getClassLoader()
                         .getResourceAsStream(
-                            "2.0/EPCIS/JSON/Capture/Documents/SensorData_and_extension.json"))
-                .readAllBytes());
+                            "2.0/EPCIS/JSON/Capture/Events/ObjectEvent.json"))
+                .readAllBytes()))
+              .concat(",\n").concat(
+                  new String(
+                          Objects.requireNonNull(
+                                          getClass()
+                                                  .getClassLoader()
+                                                  .getResourceAsStream(
+                                                          "2.0/EPCIS/JSON/Capture/Events/TransformationEvent.json"))
+                                  .readAllBytes()))
+                    .concat("\n]");
 
     // Adding EPCIS XML files
     examples.put(EXAMPLE_2_0_0_XML_DOCUMENT, OASFactory.createExample().value(epcisXmlEvents));
@@ -88,7 +109,7 @@ public class EPCISExampleOASFilter implements OASFilter {
             .value(objectMapper.readValue(epcisJsonEvents, ObjectNode.class)));
 
     examples.put(EXAMPLE_2_0_0_JSON_EVENT_LIST, OASFactory.createExample().value(epcisJsonEventsList));
-
+    examples.put(EXAMPLE_2_0_0_XML_OBJECT_EVENT, OASFactory.createExample().value(epcisXmlObjectEvent));
     return examples;
   }
 }
