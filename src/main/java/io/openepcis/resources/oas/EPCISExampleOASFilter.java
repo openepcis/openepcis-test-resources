@@ -2,6 +2,7 @@ package io.openepcis.resources.oas;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import io.quarkus.runtime.annotations.RegisterForReflection;
 import org.eclipse.microprofile.openapi.OASFactory;
 import org.eclipse.microprofile.openapi.OASFilter;
 import org.eclipse.microprofile.openapi.models.Components;
@@ -13,6 +14,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Objects;
 
+@RegisterForReflection
 public class EPCISExampleOASFilter implements OASFilter {
 
   public static final String EXAMPLE_2_0_0_XML_DOCUMENT = "xmlDocument";
