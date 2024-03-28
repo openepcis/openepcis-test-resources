@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<epcis:EPCISDocument xmlns:epcis="urn:epcglobal:epcis:xsd:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cbvmda="urn:epcglobal:cbv:mda:" schemaVersion="2.0"
+<epcis:EPCISDocument xmlns:epcis="urn:epcglobal:epcis:xsd:2" schemaVersion="2.0"
                      creationDate="2022-01-20T10:41:49.296Z">
     <EPCISBody>
         <EventList>
-            <TransformationEvent xmlns:ns1="urn:epcglobal:epcis-query:xsd:2" xmlns:ns2="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
-                                 xmlns:example2="https://ns.example2.com/epcis/" xmlns:example="https://ns.example.com/epcis/" xmlns:example4="https://ns.example4.com/epcis/"
-                                 xmlns:example1="https://ns.example1.com/epcis/" xmlns:example3="https://ns.example3.com/epcis/">
+            <TransformationEvent
+                    xmlns:example="https://ns.example.com/epcis/" xmlns:example4="https://ns.example4.com/epcis/"
+                    xmlns:example3="https://ns.example3.com/epcis/">
                 <eventTime>2020-09-29T12:00:00Z</eventTime>
                 <eventTimeZoneOffset>+02:00</eventTimeZoneOffset>
                 <errorDeclaration>
-                    <declarationTime>2020-09-29T13:00Z</declarationTime>
+                    <declarationTime>2020-09-29T13:00:00.000Z</declarationTime>
                     <example:issuer>Employee 123</example:issuer>
                     <example:field>foo bar</example:field>
                     <example3:errorCodes>

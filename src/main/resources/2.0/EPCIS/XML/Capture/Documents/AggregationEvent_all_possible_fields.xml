@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<epcis:EPCISDocument xmlns:epcis="urn:epcglobal:epcis:xsd:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cbvmda="urn:epcglobal:cbv:mda:" schemaVersion="2.0"
+<epcis:EPCISDocument xmlns:epcis="urn:epcglobal:epcis:xsd:2" schemaVersion="2.0"
                      creationDate="2013-06-04T14:59:02.099+02:00">
     <EPCISBody>
         <EventList>
-            <AggregationEvent xmlns:ns1="urn:epcglobal:epcis-query:xsd:2" xmlns:ns2="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
-                              xmlns:ext2="http://example.com/ext2/" xmlns:ext1="http://example.com/ext1/" xmlns:ext3="http://example.com/ext3/">
+            <AggregationEvent
+                    xmlns:ext2="http://example.com/ext2/" xmlns:ext1="http://example.com/ext1/" xmlns:ext3="http://example.com/ext3/">
                 <eventTime>2013-06-08T14:58:56.591Z</eventTime>
                 <eventTimeZoneOffset>+02:00</eventTimeZoneOffset>
                 <eventID>ni:///sha-256;cd834b5a08e76778617369c29c9ecc1007508a0ae5dcf063e48b6bf05eb10097?ver=CBV2.0</eventID>
                 <errorDeclaration>
-                    <declarationTime>2013-11-07T13:00Z</declarationTime>
+                    <declarationTime>2013-11-07T14:00:00.000+01:00</declarationTime>
                     <reason>urn:epcglobal:cbv:er:incorrect_data</reason>
                     <correctiveEventIDs>
                         <correctiveEventID>ni:///sha-256;fec9667280c4710a3fa9558b7bc8ddc2ced0dc442d87f82becae24bb6ca6a46f?ver=CBV2.0</correctiveEventID>
@@ -108,8 +108,8 @@
                     </sensorElement>
                 </sensorElementList>
                 <persistentDisposition>
-                    <set>urn:epcglobal:cbv:disp:completeness_verified</set>
                     <unset>urn:epcglobal:cbv:disp:completeness_inferred</unset>
+                    <set>urn:epcglobal:cbv:disp:completeness_verified</set>
                 </persistentDisposition>
                 <ext1:float>20</ext1:float>
                 <ext1:time>2013-06-08T14:58:56.591Z</ext1:time>

@@ -260,11 +260,11 @@
           }
         ],
         "persistentDisposition": {
-          "set": [
-            "completeness_verified"
-          ],
           "unset": [
             "completeness_inferred"
+          ],
+          "set": [
+            "completeness_verified"
           ]
         },
         "ext1:float": "20",

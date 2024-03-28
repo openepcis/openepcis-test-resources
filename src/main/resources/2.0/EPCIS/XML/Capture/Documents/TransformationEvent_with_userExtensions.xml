@@ -4,7 +4,7 @@
                      xmlns:example3="http://ns.example.com/epcis-3/"
                      xmlns:example4="http://ns.example.com/epcis-4/"
                      xmlns:cbvmda="urn:epcglobal:cbv:mda"
-                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" creationDate="2005-07-11T11:30:47.0Z" schemaVersion="2.0">
+                     creationDate="2005-07-11T11:30:47.0Z" schemaVersion="2.0">
     <EPCISBody>
         <EventList>
             <TransformationEvent>

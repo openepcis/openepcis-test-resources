@@ -40,14 +40,12 @@
           }
         ],
         "example:myField": "Example of a vendor/user extension",
-        "extension": {
-          "example:extension": {
-            "moreExtensions": {
-              "futureExtension": {
-                "tag1": "1",
-                "tag2": "2",
-                "tag3": "3"
-              }
+        "example:extension": {
+          "moreExtensions": {
+            "futureExtension": {
+              "tag1": "1",
+              "tag2": "2",
+              "tag3": "3"
             }
           }
         }

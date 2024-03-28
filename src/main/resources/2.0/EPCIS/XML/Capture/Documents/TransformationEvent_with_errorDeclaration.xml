@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<epcis:EPCISDocument xmlns:epcis="urn:epcglobal:epcis:xsd:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cbvmda="urn:epcglobal:cbv:mda:" schemaVersion="2.0" creationDate="2020-01-15T07:47:21.677+00:00">
+<epcis:EPCISDocument xmlns:epcis="urn:epcglobal:epcis:xsd:2" schemaVersion="2.0" creationDate="2020-01-15T07:47:21.677+00:00">
     <EPCISBody>
         <EventList>
-            <TransformationEvent xmlns:ns1="urn:epcglobal:epcis-query:xsd:2" xmlns:ns2="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:example="http://ns.example.com/epcis/">
+            <TransformationEvent xmlns:example="http://ns.example.com/epcis/">
                 <eventTime>2020-01-14T00:00:00+01:00</eventTime>
                 <eventTimeZoneOffset>+01:00</eventTimeZoneOffset>
                 <eventID>urn:uuid:374d95fc-9457-4a51-bd6a-0bba133845a8</eventID>
                 <errorDeclaration>
-                    <declarationTime>2020-01-14T23:00Z</declarationTime>
+                    <declarationTime>2020-01-15T00:00:00+01:00</declarationTime>
                     <reason>urn:epcglobal:cbv:er:incorrect_data</reason>
                     <correctiveEventIDs>
                         <correctiveEventID>urn:uuid:404d95fc-9457-4a51-bd6a-0bba133845a8</correctiveEventID>
@@ -39,7 +39,7 @@
                     <id>urn:epc:id:sgln:0614141.07346.1234</id>
                 </readPoint>
             </TransformationEvent>
-            <TransformationEvent xmlns:ns1="urn:epcglobal:epcis-query:xsd:2" xmlns:ns2="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" xmlns:example="http://ns.example.com/epcis/">
+            <TransformationEvent xmlns:example="http://ns.example.com/epcis/">
                 <eventTime>2021-01-28T00:00:00+01:00</eventTime>
                 <eventTimeZoneOffset>+01:00</eventTimeZoneOffset>
                 <eventID>urn:uuid:404d95fc-9457-4a51-bd6a-0bba133845a8</eventID>
