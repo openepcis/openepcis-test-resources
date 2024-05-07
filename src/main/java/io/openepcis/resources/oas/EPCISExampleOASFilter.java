@@ -23,12 +23,13 @@ public class EPCISExampleOASFilter implements OASFilter {
   public static final String EXAMPLE_2_0_0_JSON_EVENT_LIST = "jsonEventsList";
 
   public static final String EXAMPLE_2_0_0_XML_OBJECT_EVENT = "xmlObjectEvent";
-  private final ObjectMapper objectMapper = new ObjectMapper();
+  protected final ObjectMapper objectMapper = new ObjectMapper();
 
+  protected Components defaultComponents;
   @Override
   public void filterOpenAPI(OpenAPI openAPI) {
     try {
-      Components defaultComponents = OASFactory.createComponents();
+      defaultComponents = OASFactory.createComponents();
       if (openAPI.getComponents() == null) {
         openAPI.setComponents(defaultComponents);
       }
