@@ -107,10 +107,6 @@
                         <ext1:string>string</ext1:string>
                     </sensorElement>
                 </sensorElementList>
-                <persistentDisposition>
-                    <unset>urn:epcglobal:cbv:disp:completeness_inferred</unset>
-                    <set>urn:epcglobal:cbv:disp:completeness_verified</set>
-                </persistentDisposition>
                 <ext1:float>20</ext1:float>
                 <ext1:time>2013-06-08T14:58:56.591Z</ext1:time>
                 <ext1:array>12</ext1:array>
