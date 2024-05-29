@@ -67,14 +67,6 @@
             },
             "bizLocation": {
               "id": "urn:epc:id:sgln:9529999.99999.0"
-            },
-            "persistentDisposition": {
-              "set": [
-                "completeness_verified"
-              ],
-              "unset": [
-                "completeness_inferred"
-              ]
             }
           },
           {

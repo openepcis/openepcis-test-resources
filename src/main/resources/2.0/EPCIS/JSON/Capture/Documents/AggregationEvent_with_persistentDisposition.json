@@ -58,12 +58,7 @@
             "type": "owning_party",
             "destination": "urn:epc:id:pgln:9520999.99999"
           }
-        ],
-        "persistentDisposition": {
-          "set": [
-            "completeness_inferred"
-          ]
-        }
+        ]
       },
       {
         "type": "AggregationEvent",

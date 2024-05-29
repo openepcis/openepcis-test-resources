@@ -176,14 +176,6 @@
             "ext1:string": "string"
           }
         ],
-        "persistentDisposition": {
-          "unset": [
-            "completeness_inferred"
-          ],
-          "set": [
-            "completeness_verified"
-          ]
-        },
         "ext1:float": "20",
         "ext1:time": "2013-06-08T14:58:56.591Z",
         "ext1:array": [
