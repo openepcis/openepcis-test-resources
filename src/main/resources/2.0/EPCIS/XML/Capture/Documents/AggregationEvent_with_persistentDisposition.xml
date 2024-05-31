@@ -42,10 +42,6 @@
 				<destinationList>
 					<destination type="urn:epcglobal:cbv:sdt:owning_party">urn:epc:id:pgln:9520999.99999</destination>
 				</destinationList>
-				<!-- COMPLETENESS INFERRED -->
-				<persistentDisposition>
-					<set>urn:epcglobal:cbv:disp:completeness_inferred</set>
-				</persistentDisposition>
 			</AggregationEvent>
 			<!-- UNPACKING event with VERIFICATION of COMPLETENESS -->
 			<AggregationEvent>
