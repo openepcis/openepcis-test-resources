@@ -19,22 +19,19 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>io.openepcis</groupId>
-        <artifactId>openepcis-bom</artifactId>
+        <artifactId>openepcis-test-resources-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath></relativePath>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>openepcis-test-resources-parent</artifactId>
-    <name>openepcis-test-resources-parent</name>
+    <groupId>io.openepcis.quarkus</groupId>
+    <artifactId>quarkus-test-resources-parent</artifactId>
     <packaging>pom</packaging>
-    <description>The project includes a comprehensive collection of EPCIS events in both XML and JSON/JSON-LD formats,
-        intended for various testing purposes.
-    </description>
+    <name>quarkus-test-resources-parent</name>
+    <description>Quarkus OpenEPCIS Test Resources Parent</description>
     <url>https://github.com/openepcis/openepcis-test-resources</url>
 
     <licenses>
@@ -46,8 +43,8 @@
 
     <developers>
         <developer>
-            <name>Aravinda Baliga B</name>
-            <email>aravinda.baliga@benelog.com</email>
+            <name>Sven Boeckelmann</name>
+            <email>sven.boeckelmann@benelog.com</email>
             <organization>benelog GmbH &amp; Co. KG</organization>
             <organizationUrl>https://www.benelog.com</organizationUrl>
         </developer>
@@ -59,39 +56,9 @@
         <url>https://github.com/openepcis/openepcis-test-resources/tree/main</url>
     </scm>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
     <modules>
-        <module>core</module>
-        <module>quarkus</module>
+        <module>runtime</module>
+        <module>deployment</module>
     </modules>
-
-    <dependencyManagement>
-        <dependencies>
-            <!-- Add constants as dependencies -->
-            <dependency>
-                <groupId>io.openepcis</groupId>
-                <artifactId>openepcis-epcis-constants</artifactId>
-                <version>${project.parent.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.openepcis</groupId>
-                <artifactId>openepcis-test-resources</artifactId>
-                <version>${project.parent.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.openepcis.quarkus</groupId>
-                <artifactId>quarkus-test-resources</artifactId>
-                <version>${project.parent.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.openepcis.quarkus</groupId>
-                <artifactId>quarkus-test-resources-deployment</artifactId>
-                <version>${project.parent.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
 </project>
