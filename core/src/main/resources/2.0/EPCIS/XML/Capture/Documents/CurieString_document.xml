@@ -4,10 +4,14 @@
                      xsi:schemaLocation="urn:epcglobal:epcis:xsd:2 EPCglobal-epcis-2_0.xsd">
     <EPCISBody>
         <EventList>
-            <ObjectEvent>
+            <ObjectEvent xmlns:gs1="https://gs1.org/voc/">
                 <eventTime>2023-01-11T12:00:00+01:00</eventTime>
                 <eventTimeZoneOffset>+01:00</eventTimeZoneOffset>
-                <certificationInfo>https://accreditation-council.example.org/certificate/ABC12345</certificationInfo>
+                <certificationInfo>
+                    <gs1:CertificationDetails>
+                        <gs1:certificationURI>https://accreditation-council.example.org/certificate/ABC12345</gs1:certificationURI>
+                    </gs1:CertificationDetails>
+                </certificationInfo>
                 <epcList>
                     <epc>https://id.gs1.de/01/04012345999990/21/XYZ-1234</epc>
                 </epcList>
