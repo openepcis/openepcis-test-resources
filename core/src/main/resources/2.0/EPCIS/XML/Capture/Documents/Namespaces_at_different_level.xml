@@ -3,10 +3,14 @@
                      creationDate="2023-01-11T12:00:00.000+01:00">
     <EPCISBody>
         <EventList>
-            <ObjectEvent xmlns:ext2="http://www.ext2.net/" xmlns:ext1="https://ns.ext.de/epcis/">
+            <ObjectEvent xmlns:ext2="http://www.ext2.net/" xmlns:ext1="https://ns.ext.de/epcis/" xmlns:gs1="https://gs1.org/voc/">
                 <eventTime>2023-01-11T12:00:00+01:00</eventTime>
                 <eventTimeZoneOffset>+01:00</eventTimeZoneOffset>
-                <certificationInfo>https://accreditation-council.example.org/certificate/ABC12345</certificationInfo>
+                <certificationInfo>
+                    <gs1:CertificationDetails>
+                        <gs1:certificationURI>https://accreditation-council.example.org/certificate/ABC12345</gs1:certificationURI>
+                    </gs1:CertificationDetails>
+                </certificationInfo>
                 <epcList>
                     <epc>https://id.gs1.de/01/04012345999990/21/XYZ-1234</epc>
                 </epcList>
@@ -21,10 +25,14 @@
                 <ext2:address>Cologne</ext2:address>
                 <ext1:name>Testing</ext1:name>
             </ObjectEvent>
-            <ObjectEvent xmlns:ext4="http://www.ext4.net/" xmlns:ext1="https://ns.ext.de/epcis/" xmlns:ext3="http://www.ext3.net/">
+            <ObjectEvent xmlns:ext4="http://www.ext4.net/" xmlns:ext1="https://ns.ext.de/epcis/" xmlns:ext3="http://www.ext3.net/" xmlns:gs1="https://gs1.org/voc/">
                 <eventTime>2023-01-11T12:00:00+01:00</eventTime>
                 <eventTimeZoneOffset>+01:00</eventTimeZoneOffset>
-                <certificationInfo>https://accreditation-council.example.org/certificate/ABC12345</certificationInfo>
+                <certificationInfo>
+                    <gs1:CertificationDetails>
+                        <gs1:certificationURI>https://accreditation-council.example.org/certificate/ABC12345</gs1:certificationURI>
+                    </gs1:CertificationDetails>
+                </certificationInfo>
                 <epcList>
                     <epc>https://id.gs1.de/01/04012345999990/21/XYZ-1234</epc>
                 </epcList>
@@ -42,10 +50,14 @@
                     <ext4:city>Bangalore</ext4:city>
                 </ext4:address>
             </ObjectEvent>
-            <ObjectEvent xmlns:ext1="https://ns.ext.de/epcis/">
+            <ObjectEvent xmlns:ext1="https://ns.ext.de/epcis/" xmlns:gs1="https://gs1.org/voc/">
                 <eventTime>2023-01-11T12:00:00+01:00</eventTime>
                 <eventTimeZoneOffset>+01:00</eventTimeZoneOffset>
-                <certificationInfo>https://accreditation-council.example.org/certificate/ABC12345</certificationInfo>
+                <certificationInfo>
+                    <gs1:CertificationDetails>
+                        <gs1:certificationURI>https://accreditation-council.example.org/certificate/ABC12345</gs1:certificationURI>
+                    </gs1:CertificationDetails>
+                </certificationInfo>
                 <epcList>
                     <epc>https://id.gs1.de/01/04012345999990/21/XYZ-1234</epc>
                 </epcList>
@@ -58,10 +70,14 @@
                     </sensorElement>
                 </sensorElementList>
             </ObjectEvent>
-            <ObjectEvent xmlns:ext5="http://www.ext4.net/" xmlns:ext1="https://ns.ext.de/epcis/">
+            <ObjectEvent xmlns:ext5="http://www.ext4.net/" xmlns:ext1="https://ns.ext.de/epcis/" xmlns:gs1="https://gs1.org/voc/">
                 <eventTime>2023-01-11T12:00:00+01:00</eventTime>
                 <eventTimeZoneOffset>+01:00</eventTimeZoneOffset>
-                <certificationInfo>https://accreditation-council.example.org/certificate/ABC12345</certificationInfo>
+                <certificationInfo>
+                    <gs1:CertificationDetails>
+                        <gs1:certificationURI>https://accreditation-council.example.org/certificate/ABC12345</gs1:certificationURI>
+                    </gs1:CertificationDetails>
+                </certificationInfo>
                 <epcList>
                     <epc>https://id.gs1.de/01/04012345999990/21/XYZ-1234</epc>
                 </epcList>
@@ -75,10 +91,14 @@
                 </sensorElementList>
                 <ext5:hello>Testing</ext5:hello>
             </ObjectEvent>
-            <ObjectEvent xmlns:ext1="https://ns.ext.de/epcis/" xmlns:ext7="http://www.ext7.net/">
+            <ObjectEvent xmlns:ext1="https://ns.ext.de/epcis/" xmlns:ext7="http://www.ext7.net/" xmlns:gs1="https://gs1.org/voc/">
                 <eventTime>2023-01-11T12:00:00+01:00</eventTime>
                 <eventTimeZoneOffset>+01:00</eventTimeZoneOffset>
-                <certificationInfo>https://accreditation-council.example.org/certificate/ABC12345</certificationInfo>
+                <certificationInfo>
+                    <gs1:CertificationDetails>
+                        <gs1:certificationURI>https://accreditation-council.example.org/certificate/ABC12345</gs1:certificationURI>
+                    </gs1:CertificationDetails>
+                </certificationInfo>
                 <epcList>
                     <epc>https://id.gs1.de/01/04012345999990/21/XYZ-1234</epc>
                 </epcList>
