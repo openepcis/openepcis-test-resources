@@ -2,7 +2,7 @@
 <epcis:EPCISDocument xmlns:epcis="urn:epcglobal:epcis:xsd:2" schemaVersion="2.0" creationDate="2013-06-04T14:59:02.099+02:00">
     <EPCISBody>
         <EventList>
-            <TransformationEvent xmlns:ext2="http://example.com/ext2/" xmlns:ext1="http://example.com/ext1/" xmlns:ext3="http://example.com/ext3/" xmlns:gs1="https://gs1.org/voc/">
+            <TransformationEvent xmlns:ext2="http://example.com/ext2/" xmlns:ext1="http://example.com/ext1/" xmlns:ext3="http://example.com/ext3/">
                 <eventTime>2013-10-31T14:58:56.591Z</eventTime>
                 <eventTimeZoneOffset>+02:00</eventTimeZoneOffset>
                 <eventID>ni:///sha-256;0bf4271d60ed65fb687e95f7216c4c0a4c1181c070f657d41385b6fbd93e97ef?ver=CBV2.0</eventID>
@@ -13,11 +13,7 @@
                         <correctiveEventID>ni:///sha-256;fec9667280c4710a3fa9558b7bc8ddc2ced0dc442d87f82becae24bb6ca6a46f?ver=CBV2.0</correctiveEventID>
                     </correctiveEventIDs>
                 </errorDeclaration>
-                <certificationInfo>
-                    <gs1:CertificationDetails>
-                        <gs1:certificationURI>https://accreditation-council.example.org/certificate/ABC12345</gs1:certificationURI>
-                    </gs1:CertificationDetails>
-                </certificationInfo>
+                <certificationInfo>https://accreditation-council.example.org/certificate/ABC12345</certificationInfo>
                 <inputEPCList>
                     <epc>urn:epc:id:sgtin:4012345.011122.25</epc>
                     <epc>urn:epc:id:sgtin:4000001.065432.99886655</epc>

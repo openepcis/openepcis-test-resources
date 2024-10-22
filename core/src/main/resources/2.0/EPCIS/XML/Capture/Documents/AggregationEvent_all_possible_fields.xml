@@ -4,7 +4,7 @@
     <EPCISBody>
         <EventList>
             <AggregationEvent
-                    xmlns:ext2="http://example.com/ext2/" xmlns:ext1="http://example.com/ext1/" xmlns:ext3="http://example.com/ext3/" xmlns:gs1="https://gs1.org/voc/">
+                    xmlns:ext2="http://example.com/ext2/" xmlns:ext1="http://example.com/ext1/" xmlns:ext3="http://example.com/ext3/">
                 <eventTime>2013-06-08T14:58:56.591Z</eventTime>
                 <eventTimeZoneOffset>+02:00</eventTimeZoneOffset>
                 <eventID>ni:///sha-256;cd834b5a08e76778617369c29c9ecc1007508a0ae5dcf063e48b6bf05eb10097?ver=CBV2.0</eventID>
@@ -15,11 +15,7 @@
                         <correctiveEventID>ni:///sha-256;fec9667280c4710a3fa9558b7bc8ddc2ced0dc442d87f82becae24bb6ca6a46f?ver=CBV2.0</correctiveEventID>
                     </correctiveEventIDs>
                 </errorDeclaration>
-                <certificationInfo>
-                    <gs1:CertificationDetails>
-                        <gs1:certificationURI>https://accreditation-council.example.org/certificate/ABC12345</gs1:certificationURI>
-                    </gs1:CertificationDetails>
-                </certificationInfo>
+                <certificationInfo>https://accreditation-council.example.org/certificate/ABC12345</certificationInfo>
                 <parentID>urn:epc:id:sscc:0614141.1234567890</parentID>
                 <childEPCs>
                     <epc>urn:epc:id:sgtin:0614141.107346.2017</epc>
