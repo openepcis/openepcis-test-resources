@@ -19,13 +19,7 @@
         ],
         "eventTime": "2023-01-11T12:00:00+01:00",
         "eventTimeZoneOffset": "+01:00",
-        "certificationInfo": [
-          {
-            "gs1:CertificationDetails": {
-              "gs1:certificationURI": "https://accreditation-council.example.org/certificate/ABC12345"
-            }
-          }
-        ],
+        "certificationInfo": "https://accreditation-council.example.org/certificate/ABC12345",
         "epcList": [
           "https://id.gs1.de/01/04012345999990/21/XYZ-1234"
         ],
@@ -63,13 +57,7 @@
         ],
         "eventTime": "2023-01-11T12:00:00+01:00",
         "eventTimeZoneOffset": "+01:00",
-        "certificationInfo": [
-          {
-            "gs1:CertificationDetails": {
-              "gs1:certificationURI": "https://accreditation-council.example.org/certificate/ABC12345"
-            }
-          }
-        ],
+        "certificationInfo": "https://accreditation-council.example.org/certificate/ABC12345",
         "epcList": [
           "https://id.gs1.de/01/04012345999990/21/XYZ-1234"
         ],
@@ -99,13 +87,7 @@
         "type": "ObjectEvent",
         "eventTime": "2023-01-11T12:00:00+01:00",
         "eventTimeZoneOffset": "+01:00",
-        "certificationInfo": [
-          {
-            "gs1:CertificationDetails": {
-              "gs1:certificationURI": "https://accreditation-council.example.org/certificate/ABC12345"
-            }
-          }
-        ],
+        "certificationInfo": "https://accreditation-council.example.org/certificate/ABC12345",
         "epcList": [
           "https://id.gs1.de/01/04012345999990/21/XYZ-1234"
         ],
@@ -135,13 +117,7 @@
         ],
         "eventTime": "2023-01-11T12:00:00+01:00",
         "eventTimeZoneOffset": "+01:00",
-        "certificationInfo": [
-          {
-            "gs1:CertificationDetails": {
-              "gs1:certificationURI": "https://accreditation-council.example.org/certificate/ABC12345"
-            }
-          }
-        ],
+        "certificationInfo": "https://accreditation-council.example.org/certificate/ABC12345",
         "epcList": [
           "https://id.gs1.de/01/04012345999990/21/XYZ-1234"
         ],
@@ -172,13 +148,7 @@
         ],
         "eventTime": "2023-01-11T12:00:00+01:00",
         "eventTimeZoneOffset": "+01:00",
-        "certificationInfo": [
-          {
-            "gs1:CertificationDetails": {
-              "gs1:certificationURI": "https://accreditation-council.example.org/certificate/ABC12345"
-            }
-          }
-        ],
+        "certificationInfo": "https://accreditation-council.example.org/certificate/ABC12345",
         "epcList": [
           "https://id.gs1.de/01/04012345999990/21/XYZ-1234"
         ],
