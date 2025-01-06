@@ -130,30 +130,36 @@
             "ext1:string": "string",
             "ext1:object": {
               "ext2:string": "stringInObject",
-              "ext2:array": "11",
-              "ext2:array": "21",
-              "ext2:array": "stringInArrayInObject",
+              "ext2:array": [
+                "11",
+                "21",
+                "stringInArrayInObject"
+              ],
               "ext2:object": {
                 "ext3:string": "stringInObjectInObject"
               }
             },
-            "ext1:array": "12",
-            "ext1:array": "22",
-            "ext1:array": "2013-06-08T14:58:56.591Z",
-            "ext1:array": "true",
-            "ext1:array": "stringInArray",
-            "ext1:array": {
-              "ext1:object": {
-                "ext2:int": "13",
-                "ext2:string": "stringInObjectInArray",
-                "ext2:array": "14",
-                "ext2:array": "23.0",
-                "ext2:array": "stringInArrayInObjectInArray",
-                "ext2:object": {
-                  "ext3:string": "stringInObjectInObjectInArray"
+            "ext1:array": [
+              "12",
+              "22",
+              "2013-06-08T14:58:56.591Z",
+              "true",
+              "stringInArray",
+              {
+                "ext1:object": {
+                  "ext2:int": "13",
+                  "ext2:string": "stringInObjectInArray",
+                  "ext2:array": [
+                    "14",
+                    "23.0",
+                    "stringInArrayInObjectInArray"
+                  ],
+                  "ext2:object": {
+                    "ext3:string": "stringInObjectInObjectInArray"
+                  }
                 }
               }
-            }
+            ]
           }
         ],
         "ext1:default": "stringAsDefaultValue",
@@ -164,30 +170,36 @@
         "ext1:string": "string",
         "ext1:object": {
           "ext2:string": "stringInObject",
-          "ext2:array": "11",
-          "ext2:array": "21",
-          "ext2:array": "stringInArrayInObject",
+          "ext2:array": [
+            "11",
+            "21",
+            "stringInArrayInObject"
+          ],
           "ext2:object": {
             "ext3:string": "stringInObjectInObject"
           }
         },
-        "ext1:array": "12",
-        "ext1:array": "22",
-        "ext1:array": "2013-06-08T14:58:56.591Z",
-        "ext1:array": "true",
-        "ext1:array": "stringInArray",
-        "ext1:array": {
-          "ext1:object": {
-            "ext2:int": "13",
-            "ext2:string": "stringInObjectInArray",
-            "ext2:array": "14",
-            "ext2:array": "23.0",
-            "ext2:array": "stringInArrayInObjectInArray",
-            "ext2:object": {
-              "ext3:string": "stringInObjectInObjectInArray"
+        "ext1:array": [
+          "12",
+          "22",
+          "2013-06-08T14:58:56.591Z",
+          "true",
+          "stringInArray",
+          {
+            "ext1:object": {
+              "ext2:int": "13",
+              "ext2:string": "stringInObjectInArray",
+              "ext2:array": [
+                "14",
+                "23.0",
+                "stringInArrayInObjectInArray"
+              ],
+              "ext2:object": {
+                "ext3:string": "stringInObjectInObjectInArray"
+              }
             }
           }
-        }
+        ]
       }
     ]
   }
