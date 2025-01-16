@@ -623,17 +623,20 @@
         "eventTime": "2020-09-29T14:00:00+02:00",
         "eventTimeZoneOffset": "+02:00",
         "errorDeclaration": {
-          "declarationTime": "2020-09-29T15:00:00Z",
+          "declarationTime": "2020-09-29T15:00:00+02:00",
           "example:issuer": "Employee 123",
           "example3:errorCodes": {
             "example3:value1": "34",
             "example3:value44": "66"
+          },
+          "example:field": {
+            "example:furtherData": "abcd1234"
           }
         },
         "inputQuantityList": [
           {
             "epcClass": "urn:epc:class:lgtin:4023333.055555.ABC123",
-            "quantity": 25,
+            "quantity": 25.0,
             "uom": "KGM"
           }
         ],
@@ -651,11 +654,11 @@
           "example:gs1ES": "(414)4023333000017 (254)12"
         },
         "ilmd": {
+          "cbvmda:lotNumber": "LOTABC",
           "example:grading": "A",
           "example2:userMasterData": {
             "example2:sizeCode": "B-2"
-          },
-          "cbvmda:lotNumber": "LOTABC"
+          }
         },
         "sensorElementList": [
           {
@@ -670,7 +673,7 @@
                 "minValue": 12.4,
                 "maxValue": 13.8,
                 "meanValue": 13.2,
-                "percRank": 50,
+                "percRank": 50.0,
                 "percValue": 12.7,
                 "uom": "CEL",
                 "sDev": 0.41,
@@ -682,17 +685,21 @@
               }
             ],
             "example:furtherSensorData": {
-              "example:measure2": "0.987",
-              "example:measure1": "123.5"
+              "example:measure1": "123.5",
+              "example:measure2": "0.987"
             },
             "example:someUserField": "abc123"
           }
         ],
-        "example4:otherThings": "some text",
         "example:internalData": {
-          "example:procedure": "A-1",
-          "example:machine": "urn:epc:id:giai:4012345.ABC"
-        }
+          "example:machine": "urn:epc:id:giai:4012345.ABC",
+          "example:procedure": "A-1"
+        },
+        "example2:furtherData": {
+          "example2:assemblyLine": "2",
+          "example2:workingShift": "1"
+        },
+        "example4:otherThings": "some text"
       },
       {
         "type": "ObjectEvent",
