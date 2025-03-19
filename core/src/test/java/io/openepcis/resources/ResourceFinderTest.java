@@ -15,15 +15,14 @@
  */
 package io.openepcis.resources;
 
-import io.openepcis.resources.util.ResourceFinder;
-import org.junit.Before;
-import org.junit.Test;
-
-import java.net.URL;
-import java.util.List;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+
+import io.openepcis.resources.util.ResourceFinder;
+import java.net.URL;
+import java.util.List;
+import org.junit.Before;
+import org.junit.Test;
 
 public class ResourceFinderTest {
 

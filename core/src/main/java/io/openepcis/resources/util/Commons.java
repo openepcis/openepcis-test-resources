@@ -17,11 +17,11 @@ package io.openepcis.resources.util;
 
 import io.restassured.path.xml.XmlPath;
 import io.restassured.response.Response;
-
 import java.io.InputStream;
 
 public class Commons {
-  public static final String EPCIS_EPCISDOCUMENT_EPCISBODY_EVENT_LIST = "epcis:EPCISDocument.EPCISBody.EventList";
+  public static final String EPCIS_EPCISDOCUMENT_EPCISBODY_EVENT_LIST =
+      "epcis:EPCISDocument.EPCISBody.EventList";
 
   // Read the provided file path as InputStream and return the values
   public static InputStream getInputStream(final String filePath) {
