@@ -15,19 +15,14 @@
  */
 package io.openepcis.resources;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
 import io.openepcis.resources.util.ResourceFinder;
+import org.junit.jupiter.api.Test;
+
 import java.net.URL;
 import java.util.List;
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ResourceFinderTest {
-
-  @Before
-  public void before() {}
 
   @Test
   public void findResourceWith12VersionAndFormatTest() {
