@@ -350,7 +350,7 @@
                         <eventTime>2021-05-27T11:00:00.000+01:00</eventTime>
                         <eventTimeZoneOffset>+01:00</eventTimeZoneOffset>
                         <epcList>
-                            <epc>https://id.example.com/8003/040123450007718765</epc>
+                            <epc>https://id.example.com/8003/952012200000001004</epc>
                         </epcList>
                         <action>OBSERVE</action>
                         <bizStep>https://ref.gs1.org/cbv/BizStep-sensor_reporting</bizStep>
