@@ -1,5 +1,5 @@
 <epcis:EPCISDocument schemaVersion="2.0" creationDate="2019-10-07T15:00:00.000+01:00" xmlns:epcis="urn:epcglobal:epcis:xsd:2"
-                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gs1="https://gs1.org/voc/" xmlns:cbv="https://ref.gs1.org/cbv/"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gs1="https://ref.gs1.org/voc/" xmlns:cbv="https://ref.gs1.org/cbv/"
                      xmlns:cbvmda="urn:epcglobal:cbv:mda" xmlns:example="https://ns.example.com/epcis" xmlns:example1="https://ns.example1.com/epcis" xmlns:example2="https://ns.example2.com/epcis" xmlns:example3="https://ns.example3.com/epcis" xmlns:example4="https://ns.example4.com/epcis">
     <EPCISBody>
         <EventList>
@@ -330,10 +330,10 @@
                 <eventTime>2021-05-27T11:00:00.000+01:00</eventTime>
                 <eventTimeZoneOffset>+01:00</eventTimeZoneOffset>
                 <epcList>
-                    <epc>https://id.example.com/8003/040123450007718765</epc>
+                    <epc>https://id.example.com/8003/952012200000001004</epc>
                 </epcList>
                 <action>OBSERVE</action>
-                <bizStep>https://ref.gs1.org/cbv/Bizstep-sensor_reporting</bizStep>
+                <bizStep>https://ref.gs1.org/cbv/BizStep-sensor_reporting</bizStep>
                 <readPoint>
                     <id>https://id.example.com/414/4012345000054</id>
                 </readPoint>
