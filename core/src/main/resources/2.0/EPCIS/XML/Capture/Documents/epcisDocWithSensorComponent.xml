@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epcis:EPCISDocument xmlns:cbvmda="urn:epcglobal:cbv:mda" xmlns:epcis="urn:epcglobal:epcis:xsd:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.0"
+                     creationDate="2022-04-07T15:00:00.000+01:00">
+    <EPCISBody>
+        <EventList>
+            <ObjectEvent>
+                <eventTime>2022-04-07T10:00:00Z</eventTime>
+                <eventTimeZoneOffset>+01:00</eventTimeZoneOffset>
+                <epcList>
+                    <epc>urn:epc:id:grai:040123450.007.18765</epc>
+                </epcList>
+                <action>OBSERVE</action>
+                <bizStep>urn:epcglobal:cbv:bizstep:sensor_reporting</bizStep>
+                <readPoint>
+                    <id>urn:epc:id:sgln:4012345.00005.0</id>
+                </readPoint>
+                <sensorElementList>
+                    <sensorElement>
+                        <sensorReport type="gs1:Angle" value="42.698334" component="cbv:Comp-latitude" uom="DD"
+                                      coordinateReferenceSystem="http://www.opengis.net/def/crs/OGC/1.3/CRS84"></sensorReport>
+                        <sensorReport type="gs1:Angle" value="23.319941" component="cbv:Comp-longitude" uom="DD"
+                                      coordinateReferenceSystem="http://www.opengis.net/def/crs/OGC/1.3/CRS84"></sensorReport>
+                    </sensorElement>
+                </sensorElementList>
+            </ObjectEvent>
+        </EventList>
+    </EPCISBody>
+</epcis:EPCISDocument>
