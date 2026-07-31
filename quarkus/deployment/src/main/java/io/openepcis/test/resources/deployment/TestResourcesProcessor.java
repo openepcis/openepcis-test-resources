@@ -21,17 +21,17 @@ import io.quarkus.deployment.builditem.nativeimage.NativeImageResourcePatternsBu
 
 public class TestResourcesProcessor {
 
-  private static final String FEATURE = "openepcis-test-resources";
+    private static final String FEATURE = "openepcis-test-resources";
 
-  @BuildStep
-  FeatureBuildItem feature() {
-    return new FeatureBuildItem(FEATURE);
-  }
+    @BuildStep
+    FeatureBuildItem feature() {
+        return new FeatureBuildItem(FEATURE);
+    }
 
-  @BuildStep
-  NativeImageResourcePatternsBuildItem addNativeImageResourceBuildItem() {
-    return NativeImageResourcePatternsBuildItem.builder()
-        .includeGlobs("1.2/EPCIS/**", "2.0/EPCIS/**")
-        .build();
-  }
+    @BuildStep
+    NativeImageResourcePatternsBuildItem addNativeImageResourceBuildItem() {
+        return NativeImageResourcePatternsBuildItem.builder()
+                .includeGlobs("1.2/EPCIS/**", "2.0/EPCIS/**")
+                .build();
+    }
 }

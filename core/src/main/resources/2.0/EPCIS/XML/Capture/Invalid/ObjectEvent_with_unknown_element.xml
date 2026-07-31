@@ -1,0 +1,17 @@
+<epcis:EPCISDocument xmlns:epcis="urn:epcglobal:epcis:xsd:2"
+                     schemaVersion="2.0"
+                     creationDate="2026-07-22T10:30:00Z">
+    <EPCISBody>
+        <EventList>
+            <ObjectEvent>
+                <eventTime>2026-07-22T06:45:00+02:00</eventTime>
+                <eventTimeZoneOffset>+02:00</eventTimeZoneOffset>
+                <epcList>
+                    <epc>urn:epc:id:sgtin:9521141.001234.2017</epc>
+                </epcList>
+                <action>ADD</action>
+                <madeUpField>x</madeUpField>
+            </ObjectEvent>
+        </EventList>
+    </EPCISBody>
+</epcis:EPCISDocument>
