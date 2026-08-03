@@ -1,23 +1,30 @@
-<?xml version="1.0" ?>
-<epcisq:EPCISQueryDocument xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:epcisq="urn:epcglobal:epcis-query:xsd:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                           schemaVersion="1" creationDate="2023-02-03T10:18:31.220Z">
+<?xml version="1.0" encoding="UTF-8"?>
+<epcisq:EPCISQueryDocument xmlns:epcisq="urn:epcglobal:epcis-query:xsd:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.0"
+                           creationDate="2005-07-11T11:30:47.0Z">
     <EPCISBody>
-        <epcisq:Poll>
-            <queryName>SimpleEventQuery</queryName>
-            <params>
-                <param>
-                    <name>eventType</name>
-                    <value xsi:type="epcisq:ArrayOfString">
-                        <string>ObjectEvent</string>
-                    </value>
-                </param>
-                <param>
-                    <name>EQ_action</name>
-                    <value xsi:type="epcisq:ArrayOfString">
-                        <string>ADD</string>
-                    </value>
-                </param>
-            </params>
-        </epcisq:Poll>
+        <QueryResults>
+            <resultsBody>
+                <EventList>
+                    <ObjectEvent>
+                        <eventTime>2021-05-27T14:00:00+01:00</eventTime>
+                        <eventTimeZoneOffset>+01:00</eventTimeZoneOffset>
+                        <epcList>
+                            <epc>https://id.gs1.org/8003/030013450007718765</epc>
+                        </epcList>
+                        <action>OBSERVE</action>
+                        <bizStep>https://ref.gs1.org/cbv/BizStep-sensor_reporting</bizStep>
+                        <readPoint>
+                            <id>https://id.gs1.org/414/4012345000054</id>
+                        </readPoint>
+                        <sensorElementList>
+                            <sensorElement>
+                                <sensorMetadata time="2021-05-27T12:50:00Z"></sensorMetadata>
+                                <sensorReport uom="MTS" type="https://ref.gs1.org/voc/Speed" value="4.5"></sensorReport>
+                            </sensorElement>
+                        </sensorElementList>
+                    </ObjectEvent>
+                </EventList>
+            </resultsBody>
+        </QueryResults>
     </EPCISBody>
 </epcisq:EPCISQueryDocument>

@@ -13,13 +13,13 @@
 	    "resultsBody": {
 		"eventList": [
 		    {
-			"type": "ObjectEvent",
+			"type": "ObjectEventInvalid",
 			"eventTime": "2021-05-27T14:00:00+01:00",
 			"eventTimeZoneOffset": "+01:00",
 			"epcList": [
 			    "https://id.example.com/8003/030013450007718765"
 			],
-			"action": "OBSERVE",
+			"action": "INVALIDACTION",
 			"bizStep": "sensor_reporting",
 			"readPoint": {
 			    "id": "https://id.example.com/414/4012345000054"
@@ -33,6 +33,7 @@
 				    {
 					"type": "Speed",
 					"value": 4.5,
+					"component": "x",
 					"uom": "MTS"
 				    }
 				]
