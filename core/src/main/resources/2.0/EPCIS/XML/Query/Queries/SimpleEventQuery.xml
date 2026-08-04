@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epcisq:EPCISQueryDocument xmlns:epcisq="urn:epcglobal:epcis-query:xsd:2"
+                           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                           schemaVersion="2.0" creationDate="2026-08-04T10:00:00.000Z">
+    <EPCISBody>
+        <epcisq:Poll>
+            <queryName>SimpleEventQuery</queryName>
+            <params>
+                <param>
+                    <name>eventType</name>
+                    <value xsi:type="epcisq:ArrayOfString">
+                        <string>ObjectEvent</string>
+                        <string>AggregationEvent</string>
+                    </value>
+                </param>
+                <param>
+                    <name>GE_eventTime</name>
+                    <value>2026-01-01T00:00:00+01:00</value>
+                </param>
+                <param>
+                    <name>LT_eventTime</name>
+                    <value>2026-12-31T23:59:59+01:00</value>
+                </param>
+                <param>
+                    <name>EQ_bizStep</name>
+                    <value xsi:type="epcisq:ArrayOfString">
+                        <string>https://ref.gs1.org/cbv/BizStep-shipping</string>
+                    </value>
+                </param>
+                <param>
+                    <name>EQ_bizLocation</name>
+                    <value xsi:type="epcisq:ArrayOfString">
+                        <string>https://id.gs1.org/414/9521141123452</string>
+                    </value>
+                </param>
+                <param>
+                    <name>MATCH_epc</name>
+                    <value xsi:type="epcisq:ArrayOfString">
+                        <string>https://id.gs1.org/01/09521141012345/21/2017</string>
+                    </value>
+                </param>
+            </params>
+        </epcisq:Poll>
+    </EPCISBody>
+</epcisq:EPCISQueryDocument>

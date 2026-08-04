@@ -64,6 +64,7 @@
 /2.0/EPCIS/JSON/Query/CurieString_document.json
 /2.0/EPCIS/JSON/Query/JumbledFieldsOrder.json
 /2.0/EPCIS/JSON/Query/ObjectEventWithAllPossibleFields.json
+/2.0/EPCIS/JSON/Query/Queries/SimpleEventQuery.json
 /2.0/EPCIS/JSON/Query/QueryDocumentWithMultipleEvents.json
 /2.0/EPCIS/JSON/Query/SensorData_with_combined_events.json
 /2.0/EPCIS/JSON/Query/TransactionEvent_with_userExtensions.json
@@ -118,6 +119,7 @@
 /2.0/EPCIS/XML/Query/Documents/TransactionEvent_with_userExtensions.xml
 /2.0/EPCIS/XML/Query/JumbledFieldsOrder.xml
 /2.0/EPCIS/XML/Query/ObjectEventWithAllPossibleFields.xml
+/2.0/EPCIS/XML/Query/Queries/SimpleEventQuery.xml
 /2.0/EPCIS/XML/Query/QueryDocumentWithMultipleEvents.xml
 /2.0/EPCIS/XML/Query/SensorData_with_combined_events.xml
 /2.0/EPCIS/XML/Query/TransactionEvent_with_userExtensions.xml

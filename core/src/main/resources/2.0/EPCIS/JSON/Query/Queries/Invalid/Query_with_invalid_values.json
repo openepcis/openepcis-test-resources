@@ -1,0 +1,11 @@
+{
+    "@context": "https://ref.gs1.org/standards/epcis/2.0.0/query-schema.json",
+    "eventType": [
+	"ObjectEvent"
+    ],
+    "GE_eventTime": "not-a-date",
+    "EQ_action": [
+	"SHIPPED"
+    ],
+    "orderDirection": "SIDEWAYS"
+}
