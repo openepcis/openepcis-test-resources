@@ -1,11 +1,10 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<epcisq:EPCISQueryDocument xmlns:epcisq="urn:epcglobal:epcis-query:xsd:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cbvmda="urn:epcglobal:cbv:mda:"
-                           schemaVersion="2.0" creationDate="2013-06-04T14:59:02.099+02:00">
+<?xml version="1.0" encoding="UTF-8"?>
+<epcisq:EPCISQueryDocument xmlns:epcisq="urn:epcglobal:epcis-query:xsd:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext3="http://example.com/ext3/" xmlns:ext2="http://example.com/ext2/" xmlns:ext1="http://example.com/ext1/" schemaVersion="2.0" creationDate="2005-07-11T11:30:47.0Z">
     <EPCISBody>
         <QueryResults>
             <resultsBody>
                 <EventList>
-                    <ObjectEvent xmlns:ext2="http://example.com/ext2/" xmlns:ext1="http://example.com/ext1/" xmlns:ext3="http://example.com/ext3/">
+                    <ObjectEvent xmlns:ext2="http://example.com/ext2/" xmlns:ext1="http://example.com/ext1/" xmlns:ext3="http://example.com/ext3/" xmlns:cbvmda="urn:epcglobal:cbv:mda">
                         <eventTime>2005-04-05T02:33:31.116Z</eventTime>
                         <eventTimeZoneOffset>-06:00</eventTimeZoneOffset>
                         <eventID>urn:uuid:374d95fc-9457-4a51-bd6a-0bba133845a8</eventID>
@@ -52,19 +51,9 @@
                         </destinationList>
                         <sensorElementList>
                             <sensorElement>
-                                <sensorMetadata time="2019-04-02T13:05:00Z" deviceID="urn:epc:id:giai:4000001.111" deviceMetadata="https://id.gs1.org/8004/4000001111"
-                                                rawData="https://example.org/8004/401234599999" startTime="2019-04-02T12:55:01Z" endTime="2019-04-02T13:55:00Z"
-                                                dataProcessingMethod="https://example.com/253/4012345000054987" bizRules="https://example.com/253/4012345000054987"
-                                                ext1:someFurtherMetadata="someText"/>
-                                <sensorReport type="gs1:Temperature" microorganism="https://www.ncbi.nlm.nih.gov/taxonomy/1126011"
-                                              chemicalSubstance="https://identifiers.org/inchikey:CZMRCDWAGMRECN-UGDNZRGBSA-N" time="2019-07-19T13:00:00Z" value="26.0"
-                                              component="example:x" stringValue="SomeString" booleanValue="true" hexBinaryValue="f0f0f0"
-                                              uriValue="https://id.gs1.org/8004/4000001111" minValue="26.0" maxValue="26.2" meanValue="13.2" sDev="0.1" percRank="50.0"
-                                              percValue="12.7" deviceID="urn:epc:id:giai:4000001.111" deviceMetadata="https://id.gs1.org/8004/4000001111"
-                                              rawData="https://example.org/8004/401234599999" dataProcessingMethod="https://example.com/253/4012345000054987" uom="CEL"
-                                              ext1:someFurtherReportData="someText"/>
+                                <sensorMetadata dataProcessingMethod="https://example.com/253/4012345000054987" deviceMetadata="urn:epc:id:giai:4000001.111" startTime="2019-04-02T12:55:01Z" time="2019-04-02T13:05:00Z" rawData="urn:epc:id:giai:4012345.99999" endTime="2019-04-02T13:55:00Z" deviceID="urn:epc:id:giai:4000001.111" bizRules="https://example.com/253/4012345000054987" ext1:someFurtherMetadata="someText"></sensorMetadata>
+                                <sensorReport uriValue="https://id.gs1.org/8004/4000001111" maxValue="26.2" percRank="50.0" rawData="urn:epc:id:giai:4012345.99999" type="gs1:Temperature" percValue="12.7" deviceID="urn:epc:id:giai:4000001.111" chemicalSubstance="https://identifiers.org/inchikey:CZMRCDWAGMRECN-UGDNZRGBSA-N" dataProcessingMethod="https://example.com/253/4012345000054987" component="example:x" stringValue="SomeString" minValue="26.0" uom="CEL" sDev="0.1" deviceMetadata="urn:epc:id:giai:4000001.111" microorganism="https://www.ncbi.nlm.nih.gov/taxonomy/1126011" meanValue="13.2" booleanValue="true" time="2019-07-19T13:00:00Z" value="26.0" hexBinaryValue="f0f0f0" ext1:someFurtherReportData="someText"></sensorReport>
                                 <ext1:float>20</ext1:float>
-                                <ext1:time>2013-06-08T14:58:56.591Z</ext1:time>
                                 <ext1:array>12</ext1:array>
                                 <ext1:array>22</ext1:array>
                                 <ext1:array>2013-06-08T14:58:56.591Z</ext1:array>
@@ -86,7 +75,7 @@
                                         </ext1:object>
                                     </ext1:object>
                                 </ext1:array>
-                                <ext1:boolean>true</ext1:boolean>
+                                <ext1:time>2013-06-08T14:58:56.591Z</ext1:time>
                                 <ext1:object>
                                     <ext2:array>11</ext2:array>
                                     <ext2:array>21</ext2:array>
@@ -98,14 +87,15 @@
                                     </ext2:object>
                                     <ext2:string>stringInObject</ext2:string>
                                 </ext1:object>
+                                <ext1:boolean>true</ext1:boolean>
                                 <ext1:default>stringAsDefaultValue</ext1:default>
                                 <ext1:int>10</ext1:int>
                                 <ext1:string>string</ext1:string>
                             </sensorElement>
                         </sensorElementList>
                         <persistentDisposition>
-                            <set>urn:epcglobal:cbv:disp:completeness_verified</set>
                             <unset>urn:epcglobal:cbv:disp:completeness_inferred</unset>
+                            <set>urn:epcglobal:cbv:disp:completeness_verified</set>
                         </persistentDisposition>
                         <ilmd>
                             <ext1:float>20</ext1:float>
@@ -141,20 +131,19 @@
                                 </ext2:object>
                                 <ext2:string>stringInObject</ext2:string>
                             </ext1:object>
-                            <countryOfExport>KR</countryOfExport>
-                            <grossWeight>3.5</grossWeight>
+                            <cbvmda:grossWeight>3.5</cbvmda:grossWeight>
+                            <cbvmda:countryOfExport>KR</cbvmda:countryOfExport>
                             <ext1:int>10</ext1:int>
-                            <netWeight>3.5</netWeight>
+                            <cbvmda:netWeight>3.5</cbvmda:netWeight>
                             <ext1:time>2013-06-08T14:58:56.591Z</ext1:time>
                             <ext1:boolean>true</ext1:boolean>
                             <ext1:default>stringAsDefaultValue</ext1:default>
                             <ext1:string>string</ext1:string>
-                            <countryOfOrigin>GB</countryOfOrigin>
-                            <drainedWeight>3.5</drainedWeight>
-                            <lotNumber>ABC123</lotNumber>
+                            <cbvmda:drainedWeight>3.5</cbvmda:drainedWeight>
+                            <cbvmda:countryOfOrigin>GB</cbvmda:countryOfOrigin>
+                            <cbvmda:lotNumber>ABC123</cbvmda:lotNumber>
                         </ilmd>
                         <ext1:float>20</ext1:float>
-                        <ext1:time>2013-06-08T14:58:56.591Z</ext1:time>
                         <ext1:array>12</ext1:array>
                         <ext1:array>22</ext1:array>
                         <ext1:array>2013-06-08T14:58:56.591Z</ext1:array>
@@ -176,7 +165,7 @@
                                 </ext1:object>
                             </ext1:object>
                         </ext1:array>
-                        <ext1:boolean>true</ext1:boolean>
+                        <ext1:time>2013-06-08T14:58:56.591Z</ext1:time>
                         <ext1:object>
                             <ext2:array>11</ext2:array>
                             <ext2:array>21</ext2:array>
@@ -188,6 +177,7 @@
                             </ext2:object>
                             <ext2:string>stringInObject</ext2:string>
                         </ext1:object>
+                        <ext1:boolean>true</ext1:boolean>
                         <ext1:default>stringAsDefaultValue</ext1:default>
                         <ext1:int>10</ext1:int>
                         <ext1:string>string</ext1:string>
