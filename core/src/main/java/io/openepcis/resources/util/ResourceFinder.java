@@ -24,12 +24,11 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
-import lombok.AccessLevel;
-import lombok.NoArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 
-/** Class that helps in finding the required resources based on the version, format, keyword. */
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
+/**
+ * Class that helps in finding the required resources based on the version, format, keyword.
+ */
 public class ResourceFinder {
   // Store all the files and based on provided keyword return the same
   private static final List<String> EPCIS_TEST_RESOURCES = new ArrayList<>();
@@ -40,10 +39,7 @@ public class ResourceFinder {
   }
 
   private static void loadFileList() {
-    final BufferedReader reader =
-        new BufferedReader(
-            new InputStreamReader(
-                ResourceFinder.class.getResourceAsStream("/openepcis-test-resources.list")));
+    final BufferedReader reader = new BufferedReader(new InputStreamReader(ResourceFinder.class.getResourceAsStream("/openepcis-test-resources.list")));
     EPCIS_TEST_RESOURCES.clear();
     try {
       String line = null;
@@ -64,35 +60,28 @@ public class ResourceFinder {
    * @param keyword Document/event consisting of specific info ex: error, userExtension, sensorData,
    *     etc.
    */
-  public static List<URL> searchResource(
-      String version, String format, String type, String keyword) {
+  public static List<URL> searchResource(String version, String format, String type, String keyword) {
     final List<URL> matchingFiles = new ArrayList<>();
     version = !StringUtils.isBlank(version) ? version : EPCIS.SCHEMA_VERSION_2_0;
     keyword = !StringUtils.isBlank(keyword) ? keyword.toLowerCase() : "";
     format = !StringUtils.isBlank(format) ? format.toLowerCase() : "";
     type = !StringUtils.isBlank(type) ? type.toLowerCase() : EPCIS.CAPTURE.toLowerCase();
-
     for (final String file : EPCIS_TEST_RESOURCES) {
       if (!file.contains(version)) {
         continue;
       }
-
       boolean keywordMatched = StringUtils.isBlank(keyword);
       boolean formatMatched = StringUtils.isBlank(format);
       boolean typeMatched = StringUtils.isBlank(type);
-
       if (!keywordMatched && file.toLowerCase().contains(keyword)) {
         keywordMatched = true;
       }
-
       if (!formatMatched && file.toLowerCase().contains(format)) {
         formatMatched = true;
       }
-
       if (!typeMatched && file.toLowerCase().contains(type)) {
         typeMatched = true;
       }
-
       if (keywordMatched && formatMatched && typeMatched) {
         matchingFiles.add(ResourceFinder.class.getResource(file));
         keywordMatched = false;
@@ -106,14 +95,13 @@ public class ResourceFinder {
     String file = match.getFile();
     file = file.substring(file.lastIndexOf("/"), file.lastIndexOf("."));
     final String f = file;
-    return from.stream()
-        .filter(
-            s -> {
-              String m = s.getFile();
-              m = m.substring(m.lastIndexOf("/"), m.lastIndexOf("."));
-              return m.equals(f);
-            })
-        .findFirst()
-        .orElse(null);
+    return from.stream().filter(s -> {
+      String m = s.getFile();
+      m = m.substring(m.lastIndexOf("/"), m.lastIndexOf("."));
+      return m.equals(f);
+    }).findFirst().orElse(null);
+  }
+
+  private ResourceFinder() {
   }
 }
