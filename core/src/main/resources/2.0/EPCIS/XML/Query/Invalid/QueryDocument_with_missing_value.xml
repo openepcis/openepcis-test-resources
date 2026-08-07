@@ -14,9 +14,6 @@
                 </param>
                 <param>
                     <name>EQ_readPoint</name>
-                    <value xsi:type="epcisq:ArrayOfString">
-                        <string>urn:epc:id:sgln:73784378.7838.78437834</string>
-                    </value>
                 </param>
             </params>
         </epcisq:Poll>

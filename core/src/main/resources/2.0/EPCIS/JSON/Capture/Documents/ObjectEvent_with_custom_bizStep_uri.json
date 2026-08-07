@@ -1,0 +1,22 @@
+{
+    "@context": [
+	"https://ref.gs1.org/standards/epcis/epcis-context.jsonld"
+    ],
+    "type": "EPCISDocument",
+    "schemaVersion": "2.0",
+    "creationDate": "2026-07-22T10:30:00Z",
+    "epcisBody": {
+	"eventList": [
+	    {
+		"type": "ObjectEvent",
+		"eventTime": "2026-07-22T06:45:00+02:00",
+		"eventTimeZoneOffset": "+02:00",
+		"action": "ADD",
+		"epcList": [
+		    "https://id.gs1.org/01/09521141012345/21/2017"
+		],
+		"bizStep": "https://example.com/bizStep/inspecting"
+	    }
+	]
+    }
+}

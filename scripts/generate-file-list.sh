@@ -15,5 +15,11 @@
 #     limitations under the License.
 #
 
+# Invalid documents are excluded from the discovery list on purpose.
 SCRIPT_PATH=`dirname $0`
-find $SCRIPT_PATH/../src/main/resources -type f | sed -e 's/^.*\/src\/main\/resources//g' | grep -v 'openepcis-test-resources.list' | sort > $SCRIPT_PATH/../src/main/resources/openepcis-test-resources.list
+RESOURCES=$SCRIPT_PATH/../core/src/main/resources
+find $RESOURCES -type f | \
+sed -e 's/^.*\/src\/main\/resources//g' | \
+grep -v 'openepcis-test-resources.list' | \
+grep -v '/Invalid/' | \
+      sort > $RESOURCES/openepcis-test-resources.list

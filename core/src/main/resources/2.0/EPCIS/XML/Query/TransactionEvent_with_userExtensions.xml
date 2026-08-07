@@ -1,11 +1,11 @@
-<epcisq:EPCISQueryDocument xmlns:epcisq="urn:epcglobal:epcis-query:xsd:2" xmlns:epcis="urn:epcglobal:epcis:xsd:2" xmlns:example="http://ns.example.com/epcis/"
-                           creationDate="2005-07-11T11:30:47.0Z" schemaVersion="2.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<epcisq:EPCISQueryDocument xmlns:epcisq="urn:epcglobal:epcis-query:xsd:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:example="http://ns.example.com/epcis/"
+                           schemaVersion="2.0" creationDate="2005-07-11T11:30:47.0Z">
     <EPCISBody>
-        <epcisq:QueryResults>
-            <queryName>SimpleEventQuery</queryName>
+        <QueryResults>
             <resultsBody>
                 <EventList>
-                    <TransactionEvent>
+                    <TransactionEvent xmlns:example="http://ns.example.com/epcis/" xmlns:cbvmda="urn:epcglobal:cbv:mda">
                         <eventTime>2020-07-03T00:05:00-06:00</eventTime>
                         <eventTimeZoneOffset>-06:00</eventTimeZoneOffset>
                         <bizTransactionList>
@@ -23,9 +23,11 @@
                         </readPoint>
                         <sensorElementList>
                             <sensorElement>
-                                <sensorReport type="gs1:EffectiveDoseRate" value="0.005" uom="P71"/>
+                                <sensorReport uom="P71" type="gs1:EffectiveDoseRate" value="0.005">
+                                </sensorReport>
                             </sensorElement>
                         </sensorElementList>
+                        <example:myField>Example of a vendor/user extension</example:myField>
                         <example:extension>
                             <moreExtensions>
                                 <futureExtension>
@@ -35,10 +37,9 @@
                                 </futureExtension>
                             </moreExtensions>
                         </example:extension>
-                        <example:myField>Example of a vendor/user extension</example:myField>
                     </TransactionEvent>
                 </EventList>
             </resultsBody>
-        </epcisq:QueryResults>
+        </QueryResults>
     </EPCISBody>
 </epcisq:EPCISQueryDocument>

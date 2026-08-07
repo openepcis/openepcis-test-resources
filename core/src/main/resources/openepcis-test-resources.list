@@ -4,6 +4,7 @@
 /1.2/EPCIS/XML/Capture/Documents/AssociationEvent.xml
 /1.2/EPCIS/XML/Capture/Documents/AssociationEvent_all_possible_fields.xml
 /1.2/EPCIS/XML/Capture/Documents/Document_with_namespace.xml
+/1.2/EPCIS/XML/Capture/Documents/EPCISDocument_with_comment.xml
 /1.2/EPCIS/XML/Capture/Documents/GS1_US_Pharma_Example_2_2_1_1.xml
 /1.2/EPCIS/XML/Capture/Documents/Jumbled_attributes_order.xml
 /1.2/EPCIS/XML/Capture/Documents/ObjectEvent.xml
@@ -34,6 +35,7 @@
 /2.0/EPCIS/JSON/Capture/Documents/ObjectEvent.json
 /2.0/EPCIS/JSON/Capture/Documents/ObjectEvent_all_possible_fields.json
 /2.0/EPCIS/JSON/Capture/Documents/ObjectEvent_with_comment.json
+/2.0/EPCIS/JSON/Capture/Documents/ObjectEvent_with_custom_bizStep_uri.json
 /2.0/EPCIS/JSON/Capture/Documents/ObjectEvent_with_digitalLink.json
 /2.0/EPCIS/JSON/Capture/Documents/ObjectEvent_with_error_declaration.json
 /2.0/EPCIS/JSON/Capture/Documents/ObjectEvent_with_persistentDisposition.json
@@ -51,6 +53,8 @@
 /2.0/EPCIS/JSON/Capture/Documents/TransformationEvent_with_error_declaration.json
 /2.0/EPCIS/JSON/Capture/Documents/TransformationEvent_with_sensorData.json
 /2.0/EPCIS/JSON/Capture/Documents/TransformationEvent_with_userExtensions.json
+/2.0/EPCIS/JSON/Capture/Documents/epcisDocWithAllGS1Keys.json
+/2.0/EPCIS/JSON/Capture/Documents/epcisDocWithSensorComponent.json
 /2.0/EPCIS/JSON/Capture/Events/AggregationEvent.json
 /2.0/EPCIS/JSON/Capture/Events/AssociationEvent.json
 /2.0/EPCIS/JSON/Capture/Events/ObjectEvent.json
@@ -60,13 +64,12 @@
 /2.0/EPCIS/JSON/Query/CurieString_document.json
 /2.0/EPCIS/JSON/Query/JumbledFieldsOrder.json
 /2.0/EPCIS/JSON/Query/ObjectEventWithAllPossibleFields.json
-/2.0/EPCIS/JSON/Query/QueryDocumentWithEventType.json
+/2.0/EPCIS/JSON/Query/Queries/SimpleEventQuery.json
 /2.0/EPCIS/JSON/Query/QueryDocumentWithMultipleEvents.json
 /2.0/EPCIS/JSON/Query/SensorData_with_combined_events.json
 /2.0/EPCIS/JSON/Query/TransactionEvent_with_userExtensions.json
 /2.0/EPCIS/JSON/Query/TransformationEvent_with_error_declaration.json
-/2.0/EPCIS/JSON/Query/queryDocumentWithAction.json
-/2.0/EPCIS/JSON/Query/queryDocumentWithEventTime.json
+/2.0/EPCIS/JSON/Query/queryDocument.json
 /2.0/EPCIS/XML/Capture/Documents/AggregationEvent.xml
 /2.0/EPCIS/XML/Capture/Documents/AggregationEvent_all_possible_fields.xml
 /2.0/EPCIS/XML/Capture/Documents/AggregationEvent_with_digitalLink.xml
@@ -86,6 +89,7 @@
 /2.0/EPCIS/XML/Capture/Documents/ObjectEvent.xml
 /2.0/EPCIS/XML/Capture/Documents/ObjectEvent_all_possible_fields.xml
 /2.0/EPCIS/XML/Capture/Documents/ObjectEvent_with_comment.xml
+/2.0/EPCIS/XML/Capture/Documents/ObjectEvent_with_custom_bizStep_uri.xml
 /2.0/EPCIS/XML/Capture/Documents/ObjectEvent_with_digitalLink.xml
 /2.0/EPCIS/XML/Capture/Documents/ObjectEvent_with_error_declaration.xml
 /2.0/EPCIS/XML/Capture/Documents/ObjectEvent_with_sensorData.xml
@@ -101,6 +105,8 @@
 /2.0/EPCIS/XML/Capture/Documents/TransformationEvent_with_errorDeclaration.xml
 /2.0/EPCIS/XML/Capture/Documents/TransformationEvent_with_sensorData.xml
 /2.0/EPCIS/XML/Capture/Documents/TransformationEvent_with_userExtensions.xml
+/2.0/EPCIS/XML/Capture/Documents/epcisDocWithAllGS1Keys.xml
+/2.0/EPCIS/XML/Capture/Documents/epcisDocWithSensorComponent.xml
 /2.0/EPCIS/XML/Capture/Events/AggregationEvent.xml
 /2.0/EPCIS/XML/Capture/Events/AssociationEvent.xml
 /2.0/EPCIS/XML/Capture/Events/Namespace_event.xml
@@ -112,9 +118,10 @@
 /2.0/EPCIS/XML/Query/Documents/QueryResultsDocument.xml
 /2.0/EPCIS/XML/Query/Documents/TransactionEvent_with_userExtensions.xml
 /2.0/EPCIS/XML/Query/JumbledFieldsOrder.xml
-/2.0/EPCIS/XML/Query/ObjectEvent_all_possible_fields.xml
+/2.0/EPCIS/XML/Query/ObjectEventWithAllPossibleFields.xml
+/2.0/EPCIS/XML/Query/Queries/SimpleEventQuery.xml
+/2.0/EPCIS/XML/Query/QueryDocumentWithMultipleEvents.xml
 /2.0/EPCIS/XML/Query/SensorData_with_combined_events.xml
-/2.0/EPCIS/XML/Query/TransformationEvent_with_errorDeclaration.xml
+/2.0/EPCIS/XML/Query/TransactionEvent_with_userExtensions.xml
+/2.0/EPCIS/XML/Query/TransformationEvent_with_error_declaration.xml
 /2.0/EPCIS/XML/Query/queryDocument.xml
-/2.0/EPCIS/XML/Query/queryDocumentWithEventType.xml
-/2.0/EPCIS/XML/Query/queryDocumentWithReadPoint.xml

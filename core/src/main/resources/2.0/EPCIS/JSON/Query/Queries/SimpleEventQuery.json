@@ -1,0 +1,30 @@
+{
+    "@context": "https://ref.gs1.org/standards/epcis/2.0.0/query-schema.json",
+    "eventType": [
+	"ObjectEvent",
+	"AggregationEvent"
+    ],
+    "GE_eventTime": "2026-01-01T00:00:00+01:00",
+    "LT_eventTime": "2026-12-31T23:59:59+01:00",
+    "EQ_action": [
+	"ADD",
+	"OBSERVE"
+    ],
+    "EQ_bizStep": [
+	"https://ref.gs1.org/cbv/BizStep-shipping"
+    ],
+    "EQ_disposition": [
+	"https://ref.gs1.org/cbv/Disp-in_transit"
+    ],
+    "EQ_bizLocation": [
+	"https://id.gs1.org/414/9521141123452"
+    ],
+    "MATCH_epc": [
+	"https://id.gs1.org/01/09521141012345/21/2017"
+    ],
+    "GE_quantity": 1,
+    "LT_quantity": 500,
+    "orderBy": "eventTime",
+    "orderDirection": "DESC",
+    "eventCountLimit": 100
+}

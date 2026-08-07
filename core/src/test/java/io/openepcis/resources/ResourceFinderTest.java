@@ -20,44 +20,45 @@ import org.junit.jupiter.api.Test;
 
 import java.net.URL;
 import java.util.List;
-import static org.junit.jupiter.api.Assertions.*;
 
-public class ResourceFinderTest {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
-  @Test
-  public void findResourceWith12VersionAndFormatTest() {
-    final List<URL> filesList =
-        ResourceFinder.searchResource("1.2", "xml", "capture", "ObjectEvent");
-    assertTrue(filesList.size() > 0);
-  }
+class ResourceFinderTest {
 
-  @Test
-  public void findResource12WithVersionTest() {
-    final List<URL> filesList = ResourceFinder.searchResource("1.2", "xml", "capture", null);
-    assertTrue(filesList.size() > 0);
-  }
+    @Test
+    void findResourceWith12VersionAndFormatTest() {
+        final List<URL> filesList = ResourceFinder.searchResource("1.2", "xml", "capture", "ObjectEvent");
+        assertFalse(filesList.isEmpty());
+    }
 
-  @Test
-  public void findResource20WithVersionTest() {
-    final List<URL> filesList = ResourceFinder.searchResource("1.2", "json", "capture", null);
-    assertEquals(filesList.size(), 0);
-  }
+    @Test
+    void findResource12WithVersionTest() {
+        final List<URL> filesList = ResourceFinder.searchResource("1.2", "xml", "capture", null);
+        assertFalse(filesList.isEmpty());
+    }
 
-  @Test
-  public void findResource20WithVersionKeywordTest() {
-    final List<URL> filesList = ResourceFinder.searchResource("2.0", "json", "capture", "error");
-    assertTrue(filesList.size() > 0);
-  }
+    @Test
+    void findResource20WithVersionTest() {
+        final List<URL> filesList = ResourceFinder.searchResource("1.2", "json", "capture", null);
+        assertEquals(0, filesList.size());
+    }
 
-  @Test
-  public void findResource20WithoutKeywordTest() {
-    final List<URL> filesList = ResourceFinder.searchResource("2.0", "json", "capture", null);
-    assertTrue(filesList.size() > 0);
-  }
+    @Test
+    void findResource20WithVersionKeywordTest() {
+        final List<URL> filesList = ResourceFinder.searchResource("2.0", "json", "capture", "error");
+        assertFalse(filesList.isEmpty());
+    }
 
-  @Test
-  public void findResource20QueryDocumentTest() {
-    final List<URL> filesList = ResourceFinder.searchResource("2.0", "json", "query", null);
-    assertTrue(filesList.size() > 0);
-  }
+    @Test
+    void findResource20WithoutKeywordTest() {
+        final List<URL> filesList = ResourceFinder.searchResource("2.0", "json", "capture", null);
+        assertFalse(filesList.isEmpty());
+    }
+
+    @Test
+    void findResource20QueryDocumentTest() {
+        final List<URL> filesList = ResourceFinder.searchResource("2.0", "json", "query", null);
+        assertFalse(filesList.isEmpty());
+    }
 }

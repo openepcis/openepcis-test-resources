@@ -106,7 +106,7 @@
                                     <goal>exec</goal>
                                 </goals>
                                 <configuration>
-                                    <executable>${basedir}/scripts/generate-file-list.sh</executable>
+                                    <executable>${maven.multiModuleProjectDirectory}/scripts/generate-file-list.sh</executable>
                                 </configuration>
                             </execution>
                         </executions>

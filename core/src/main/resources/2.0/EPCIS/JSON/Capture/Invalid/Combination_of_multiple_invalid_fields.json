@@ -1,0 +1,68 @@
+{
+    "@context": [
+	"https://ref.gs1.org/standards/epcis/epcis-context.jsonld"
+    ],
+    "type": "EPCISDocument",
+    "schemaVersion": "2.0",
+    "creationDate": "2026-07-22T10:30:00Z",
+    "epcisBody": {
+	"eventList": [
+	    {
+		"type": "ObjectEvent",
+		"eventTime": "2026-07-22T06:45:00+02:00",
+		"eventTimeZoneOffset": "+02:00",
+		"action": "ADD",
+		"epcList": [
+		    "https://id.gs1.org/01/09521141012345/21/2017"
+		],
+		"bizStep": "transforming"
+	    },
+	    {
+		"type": "ObjectEvent",
+		"eventTime": "2026-07-22T07:15:00+02:00",
+		"eventTimeZoneOffset": "+02:00",
+		"action": "OBSERVE",
+		"epcList": [
+		    "https://id.gs1.org/01/09521141012345/21/2017"
+		],
+		"disposition": "in_transport"
+	    },
+	    {
+		"type": "ObjectEvent",
+		"eventTime": "2026-07-22T07:45:00+02:00",
+		"eventTimeZoneOffset": "+02:00",
+		"action": "OBSERVE",
+		"epcList": [
+		    "https://id.gs1.org/01/09521141012345/21/2017"
+		],
+		"sourceList": [
+		    {
+			"type": "place",
+			"source": "urn:epc:id:sgln:952012.345678.0"
+		    }
+		]
+	    },
+	    {
+		"type": "ObjectEvent",
+		"eventTime": "2026-07-22T08:15:00+02:00",
+		"eventTimeZoneOffset": "+02:00",
+		"action": "ADD",
+		"epcList": [
+		    "https://id.gs1.org/01/09521141012345/21/2017"
+		],
+		"ilmd": {
+		    "materialType": "soil"
+		}
+	    },
+	    {
+		"type": "ObjectEvent",
+		"eventTime": "22-07-2026",
+		"eventTimeZoneOffset": "+02:00",
+		"action": "CREATE",
+		"epcList": [
+		    "https://id.gs1.org/01/09521141012345/21/2017"
+		]
+	    }
+	]
+    }
+}

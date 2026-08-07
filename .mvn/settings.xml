@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+    <servers>
+        <server>
+            <id>gitlab-maven</id>
+            <username>${env.GITLAB_MAVEN_USERNAME}</username>
+            <password>${env.GITLAB_MAVEN_TOKEN}</password>
+        </server>
+    </servers>
+
+    <profiles>
+        <!-- Provide path for GitLab package registry so the 999-SNAPSHOT parent BOM can be downloaded. -->
+        <profile>
+            <id>gitlab-maven</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+
+            <repositories>
+                <repository>
+                    <id>gitlab-maven</id>
+                    <url>${env.GITLAB_MAVEN_URL}</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>gitlab-maven</id>
+                    <url>${env.GITLAB_MAVEN_URL}</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+</settings>

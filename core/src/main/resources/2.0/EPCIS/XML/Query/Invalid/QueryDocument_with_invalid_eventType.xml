@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <epcisq:EPCISQueryDocument xmlns:epcisq="urn:epcglobal:epcis-query:xsd:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.0"
-                           creationDate="2005-07-11T11:30:47.0Z" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                           creationDate="2005-07-11T11:30:47.0Z">
     <EPCISBody>
-        <epcisq:QueryResults>
-            <queryName>SimpleEventQuery</queryName>
-            <subscriptionID>32d2aec1-a6d2-46d9-900a-24124288cce1</subscriptionID>
+        <QueryResults>
             <resultsBody>
                 <EventList>
-                    <ObjectEvent>
+                    <ObjectEventInvalid>
                         <eventTime>2021-05-27T14:00:00+01:00</eventTime>
                         <eventTimeZoneOffset>+01:00</eventTimeZoneOffset>
                         <epcList>
-                            <epc>https://id.gs1.org/8003/030013450007718765</epc>
+                            <epc>urn:epc:id:grai:030013.450007.18765</epc>
                         </epcList>
                         <action>OBSERVE</action>
-                        <bizStep>https://ref.gs1.org/cbv/BizStep-sensor_reporting</bizStep>
+                        <bizStep>urn:epcglobal:cbv:bizstep:sensor_reporting</bizStep>
                         <readPoint>
-                            <id>https://id.gs1.org/414/4012345000054</id>
+                            <id>urn:epc:id:sgln:4012345.00005.0</id>
                         </readPoint>
                         <sensorElementList>
                             <sensorElement>
-                                <sensorMetadata time="2021-05-27T12:50:00Z"></sensorMetadata>
-                                <sensorReport uom="MTS" type="https://ref.gs1.org/voc/Speed" value="4.5"></sensorReport>
+                                <sensorMetadata time="2021-05-27T12:50:00Z">
+                                </sensorMetadata>
+                                <sensorReport coordinateReferenceSystem="http://www.opengis.net/def/crs/EPSG/0/27700" component="example:cbv:Comp-northing" uom="MTR"
+                                              type="gs1:Length" value="-477979.89">
+                                </sensorReport>
                             </sensorElement>
                         </sensorElementList>
-                    </ObjectEvent>
+                    </ObjectEventInvalid>
                 </EventList>
             </resultsBody>
-        </epcisq:QueryResults>
+        </QueryResults>
     </EPCISBody>
 </epcisq:EPCISQueryDocument>
