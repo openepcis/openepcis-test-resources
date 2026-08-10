@@ -1,0 +1,10 @@
+{
+  "@context": "https://ref.gs1.org/standards/epcis/2.0.0/query-schema.json",
+  "eventType": [
+    "AssertType"
+  ],
+  "EQ_action": [
+    "CREATE"
+  ],
+  "GE_eventTime": "22-07-2026"
+}

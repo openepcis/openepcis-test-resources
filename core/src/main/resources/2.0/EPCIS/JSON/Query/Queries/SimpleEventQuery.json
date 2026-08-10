@@ -1,0 +1,14 @@
+{
+  "@context": "https://ref.gs1.org/standards/epcis/2.0.0/query-schema.json",
+  "eventType": [
+    "ObjectEvent"
+  ],
+  "GE_eventTime": "2005-04-01T00:00:00.000-06:00",
+  "LT_eventTime": "2005-04-30T00:00:00.000-06:00",
+  "EQ_action": [
+    "OBSERVE"
+  ],
+  "EQ_bizStep": [
+    "shipping"
+  ]
+}

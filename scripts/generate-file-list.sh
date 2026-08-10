@@ -16,4 +16,7 @@
 #
 
 SCRIPT_PATH=`dirname $0`
-find $SCRIPT_PATH/../src/main/resources -type f | sed -e 's/^.*\/src\/main\/resources//g' | grep -v 'openepcis-test-resources.list' | sort > $SCRIPT_PATH/../src/main/resources/openepcis-test-resources.list
+RESOURCES=$SCRIPT_PATH/../core/src/main/resources
+
+# LC_ALL=C keeps the order stable no matter which locale the committer runs under
+find $RESOURCES -type f | sed -e 's/^.*\/src\/main\/resources//g' | grep -v 'openepcis-test-resources.list' | LC_ALL=C sort > $RESOURCES/openepcis-test-resources.list
