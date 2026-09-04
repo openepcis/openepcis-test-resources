@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epcis:EPCISDocument xmlns:epcis="urn:epcglobal:epcis:xsd:2"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xmlns:gs1="https://ref.gs1.org/voc/"
+                     xmlns:gs1de="https://voc.gs1.de/"
+                     schemaVersion="2.0" creationDate="2025-06-22T11:30:00+01:00">
+    <EPCISBody>
+        <EventList>
+            <ObjectEvent>
+                <eventTime>2025-06-22T11:30:00+01:00</eventTime>
+                <eventTimeZoneOffset>+01:00</eventTimeZoneOffset>
+                <quantityList>
+                    <quantityElement>
+                        <epcClass>https://id.gs1.de/01/04012345999969/10/Batch3</epcClass>
+                        <quantity>20</quantity>
+                    </quantityElement>
+                </quantityList>
+                <action>ADD</action>
+                <bizStep>urn:epcglobal:cbv:bizstep:commissioning</bizStep>
+                <disposition>urn:epcglobal:cbv:disp:active</disposition>
+                <readPoint>
+                    <id>https://id.gs1.org/414/4262431780029</id>
+                </readPoint>
+                <gs1:masterDataAvailableFor>
+                    <id>https://id.gs1.de/01/04012345999969/10/Batch3</id>
+                    <gs1de:productionDateStart>2025-06-21</gs1de:productionDateStart>
+                    <gs1de:productionDateEnd>2025-06-22</gs1de:productionDateEnd>
+                    <expirationDate>2024-11-20</expirationDate>
+                </gs1:masterDataAvailableFor>
+            </ObjectEvent>
+        </EventList>
+    </EPCISBody>
+</epcis:EPCISDocument>

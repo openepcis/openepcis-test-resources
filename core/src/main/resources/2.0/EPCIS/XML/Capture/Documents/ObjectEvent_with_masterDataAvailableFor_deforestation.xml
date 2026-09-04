@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epcis:EPCISDocument xmlns:epcis="urn:epcglobal:epcis:xsd:2"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xmlns:gs1="https://ref.gs1.org/voc/"
+                     schemaVersion="2.0" creationDate="2005-07-30T11:30:47.0Z">
+    <EPCISBody>
+        <EventList>
+            <ObjectEvent>
+                <eventTime>2025-06-23T12:25:56Z</eventTime>
+                <eventTimeZoneOffset>+02:00</eventTimeZoneOffset>
+                <quantityList>
+                    <quantityElement>
+                        <epcClass>https://id.gs1.org/01/09506000134369/10/ABC12345</epcClass>
+                        <quantity>200</quantity>
+                        <uom>KGM</uom>
+                    </quantityElement>
+                    <quantityElement>
+                        <epcClass>https://id.gs1.org/01/09506000134369/10/XYZ98765</epcClass>
+                        <quantity>300</quantity>
+                        <uom>KGM</uom>
+                    </quantityElement>
+                </quantityList>
+                <action>OBSERVE</action>
+                <bizStep>urn:epcglobal:cbv:bizstep:notifying</bizStep>
+                <persistentDisposition>
+                    <set>urn:epcglobal:cbv:disp:subject_to_regulation</set>
+                </persistentDisposition>
+                <bizTransactionList>
+                    <bizTransaction type="urn:epcglobal:cbv:btt:inv">https://transactions.sender.example/inv/XYZ123</bizTransaction>
+                </bizTransactionList>
+                <gs1:masterDataAvailableFor>
+                    <id>https://id.gs1.org/01/09506000134369/10/ABC12345</id>
+                    <regulatoryInformation>
+                        <regulatoryAct>EU 2023/1115</regulatoryAct>
+                        <regulationType>DEFORESTATION_REGULATION</regulationType>
+                        <regulatoryIdentifier>
+                            <regulatoryReferenceNumber>r1236</regulatoryReferenceNumber>
+                            <regulatoryVerificationNumber>v9847</regulatoryVerificationNumber>
+                            <regulatoryInformationProvider>https://id.gs1.org/417/9521141123454</regulatoryInformationProvider>
+                            <regulatoryReferenceApplicabilityStartDate>2025-06-01</regulatoryReferenceApplicabilityStartDate>
+                            <regulatoryReferenceApplicabilityEndDate>2026-05-31</regulatoryReferenceApplicabilityEndDate>
+                            <regulatoryIdentifierType>DUE_DILIGENCE_STATEMENT</regulatoryIdentifierType>
+                        </regulatoryIdentifier>
+                    </regulatoryInformation>
+                </gs1:masterDataAvailableFor>
+                <gs1:masterDataAvailableFor>
+                    <id>https://id.gs1.org/01/09506000134369/10/XYZ98765</id>
+                    <regulatoryInformation>
+                        <regulatoryAct>EU 2023/1115</regulatoryAct>
+                        <regulationType>DEFORESTATION_REGULATION</regulationType>
+                        <regulatoryIdentifier>
+                            <regulatoryReferenceNumber>r987</regulatoryReferenceNumber>
+                            <regulatoryVerificationNumber>v210</regulatoryVerificationNumber>
+                            <regulatoryInformationProvider>https://infoProviderCo.example/417/9521141123454</regulatoryInformationProvider>
+                            <regulatoryReferenceApplicabilityStartDate>2025-01-01</regulatoryReferenceApplicabilityStartDate>
+                            <regulatoryReferenceApplicabilityEndDate>2025-12-31</regulatoryReferenceApplicabilityEndDate>
+                            <regulatoryIdentifierType>DUE_DILIGENCE_STATEMENT</regulatoryIdentifierType>
+                        </regulatoryIdentifier>
+                    </regulatoryInformation>
+                </gs1:masterDataAvailableFor>
+            </ObjectEvent>
+        </EventList>
+    </EPCISBody>
+</epcis:EPCISDocument>

@@ -1,0 +1,83 @@
+{
+    "@context": [
+	"https://ref.gs1.org/standards/epcis/epcis-context.jsonld",
+	{
+	    "example": "http://ns.example.com/epcis/"
+	}
+    ],
+    "type": "EPCISDocument",
+    "schemaVersion": "2.0",
+    "creationDate": "2025-01-01T00:00:00.000Z",
+    "epcisBody": {
+	"eventList": [
+	    {
+		"type": "ObjectEvent",
+		"eventTime": "2025-01-01T00:00:00.000Z",
+		"eventTimeZoneOffset": "+00:00",
+		"epcList": [
+		    "urn:epc:id:sgtin:4012345.011111.9876"
+		],
+		"quantityList": [
+		    {
+			"epcClass": "urn:epc:class:lgtin:4023333.002000.2019-10-07",
+			"quantity": 5,
+			"uom": "KGM"
+		    }
+		],
+		"action": "OBSERVE",
+		"bizStep": "shipping",
+		"disposition": "in_transit",
+		"readPoint": {
+		    "id": "urn:epc:id:sgln:0614141.07346.1234"
+		},
+		"bizLocation": {
+		    "id": "urn:epc:id:sgln:0614141.07346.5678"
+		},
+		"bizTransactionList": [
+		    {
+			"type": "po",
+			"bizTransaction": "http://transaction.acme.com/po/12345678"
+		    }
+		],
+		"sourceList": [
+		    {
+			"type": "owning_party",
+			"source": "urn:epc:id:pgln:4012345.00000"
+		    }
+		],
+		"destinationList": [
+		    {
+			"type": "owning_party",
+			"destination": "urn:epc:id:pgln:0614141.00000"
+		    }
+		],
+		"sensorElementList": [
+		    {
+			"sensorMetadata": {
+			    "time": "2025-01-01T00:00:00.000Z"
+			},
+			"sensorReport": [
+			    {
+				"type": "Temperature",
+				"value": 26.0,
+				"uom": "CEL"
+			    }
+			]
+		    }
+		],
+		"ilmd": {
+		    "example:singleIlmdArray": [
+			{
+			    "part1": "1"
+			}
+		    ]
+		},
+		"example:singleExtensionArray": [
+		    {
+			"part1": "1"
+		    }
+		]
+	    }
+	]
+    }
+}

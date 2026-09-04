@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epcis:EPCISDocument xmlns:epcis="urn:epcglobal:epcis:xsd:2"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xmlns:example="http://ns.example.com/epcis/"
+                     schemaVersion="2.0" creationDate="2025-01-01T00:00:00.000Z">
+    <EPCISBody>
+        <EventList>
+            <ObjectEvent>
+                <eventTime>2025-01-01T00:00:00.000Z</eventTime>
+                <eventTimeZoneOffset>+00:00</eventTimeZoneOffset>
+                <epcList>
+                    <epc>urn:epc:id:sgtin:4012345.011111.9876</epc>
+                </epcList>
+                <quantityList>
+                    <quantityElement>
+                        <epcClass>urn:epc:class:lgtin:4023333.002000.2019-10-07</epcClass>
+                        <quantity>5</quantity>
+                        <uom>KGM</uom>
+                    </quantityElement>
+                </quantityList>
+                <action>OBSERVE</action>
+                <bizStep>urn:epcglobal:cbv:bizstep:shipping</bizStep>
+                <disposition>urn:epcglobal:cbv:disp:in_transit</disposition>
+                <readPoint>
+                    <id>urn:epc:id:sgln:0614141.07346.1234</id>
+                </readPoint>
+                <bizLocation>
+                    <id>urn:epc:id:sgln:0614141.07346.5678</id>
+                </bizLocation>
+                <bizTransactionList>
+                    <bizTransaction type="urn:epcglobal:cbv:btt:po">http://transaction.acme.com/po/12345678</bizTransaction>
+                </bizTransactionList>
+                <sourceList>
+                    <source type="urn:epcglobal:cbv:sdt:owning_party">urn:epc:id:pgln:4012345.00000</source>
+                </sourceList>
+                <destinationList>
+                    <destination type="urn:epcglobal:cbv:sdt:owning_party">urn:epc:id:pgln:0614141.00000</destination>
+                </destinationList>
+                <sensorElementList>
+                    <sensorElement>
+                        <sensorMetadata time="2025-01-01T00:00:00.000Z"/>
+                        <sensorReport type="gs1:Temperature" value="26.0" uom="CEL"/>
+                    </sensorElement>
+                </sensorElementList>
+                <ilmd>
+                    <example:singleIlmdArray>
+                        <part1>1</part1>
+                    </example:singleIlmdArray>
+                </ilmd>
+                <example:singleExtensionArray>
+                    <part1>1</part1>
+                </example:singleExtensionArray>
+            </ObjectEvent>
+        </EventList>
+    </EPCISBody>
+</epcis:EPCISDocument>
