@@ -2,6 +2,7 @@
 <epcis:EPCISDocument xmlns:epcis="urn:epcglobal:epcis:xsd:2"
                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                      xmlns:gs1de="https://voc.gs1.de/"
+                     xmlns:gs1="https://ref.gs1.org/voc/"
                      schemaVersion="2.0" creationDate="2025-06-22T11:30:00+01:00">
     <EPCISBody>
         <EventList>
@@ -20,12 +21,12 @@
                         <quantity>20</quantity>
                     </quantityElement>
                 </quantityList>
-                <masterDataAvailableFor>
+                <gs1:masterDataAvailableFor>
                     <id>https://id.gs1.de/01/04012345999969/10/Batch3</id>
                     <gs1de:productionDateStart>2025-06-21</gs1de:productionDateStart>
                     <gs1de:productionDateEnd>2025-06-22</gs1de:productionDateEnd>
                     <expirationDate>2024-11-20</expirationDate>
-                </masterDataAvailableFor>
+                </gs1:masterDataAvailableFor>
             </ObjectEvent>
         </EventList>
     </EPCISBody>
