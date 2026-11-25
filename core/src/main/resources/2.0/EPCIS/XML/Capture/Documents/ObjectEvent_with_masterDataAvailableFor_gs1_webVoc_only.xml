@@ -34,7 +34,7 @@
                 </gs1:masterDataAvailableFor>
                 <gs1:masterDataAvailableFor>
                     <id>https://id.gs1.org/414/4262431780029</id>
-                    <locationRoleType>BACKROOM</locationRoleType>
+                    <locationRole>https://ref.gs1.org/voc/LocationRoleType-BACKROOM</locationRole>
                 </gs1:masterDataAvailableFor>
             </ObjectEvent>
         </EventList>

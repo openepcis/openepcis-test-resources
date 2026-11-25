@@ -44,7 +44,7 @@
                 </gs1:masterDataAvailableFor>
                 <gs1:masterDataAvailableFor>
                     <id>https://id.gs1.org/414/4262431780029</id>
-                    <locationRoleType>BACKROOM</locationRoleType>
+                    <locationRole>https://ref.gs1.org/voc/LocationRoleType-BACKROOM</locationRole>
                     <schema:faxNumber>+49(0)-12-345-678</schema:faxNumber>
                     <schema:isAccessibleForFree>false</schema:isAccessibleForFree>
                     <schema:about>
